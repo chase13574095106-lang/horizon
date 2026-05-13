@@ -27,5 +27,5 @@ jobs:
       - name: Push magazines to Feishu
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
-          HORIZON_WEBHOOK_URL: ${{ secrets.HORIZON_WEBHOOK_URL }}
+          HORIZON_MAGAZINE_WEBHOOK_URL: ${{ secrets.HORIZON_MAGAZINE_WEBHOOK_URL }}
         run: uv run horizon-magazine --daily

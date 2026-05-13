@@ -125,8 +125,10 @@ async def translate_toc(toc_items: list) -> list:
 
 
 async def send_to_feishu(card: dict) -> bool:
-    """Send card message via Feishu webhook."""
-    webhook_url = os.getenv("HORIZON_WEBHOOK_URL")
+    """Send card message via Feishu webhook (magazine-specific)."""
+    webhook_url = os.getenv("HORIZON_MAGAZINE_WEBHOOK_URL")
+    if not webhook_url:
+        webhook_url = os.getenv("HORIZON_WEBHOOK_URL")
     if not webhook_url:
         print("[red]Error: HORIZON_WEBHOOK_URL not set[/red]")
         return False
