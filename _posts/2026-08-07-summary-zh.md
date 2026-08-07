@@ -5,224 +5,284 @@ date: 2026-08-07
 lang: zh
 ---
 
-> From 31 items, 9 important content pieces were selected
+> From 26 items, 12 important content pieces were selected
 
 ---
 
-1. [中国团队首次证实胶球存在，发现新物质形态](#item-1) ⭐️ 9.0/10
-2. [AMD 收购 Taalas，将 AI 模型蚀刻进硅片](#item-2) ⭐️ 8.0/10
-3. [马里奥赛车遇上帕累托前沿：可视化权衡](#item-3) ⭐️ 8.0/10
-4. [Qwen3.8 Max 登顶 Agentic Index，引发热议](#item-4) ⭐️ 8.0/10
-5. [Datasette 1.0a38 修复混合公开/私有设置中的 SQL 注入漏洞](#item-5) ⭐️ 8.0/10
-6. [Anthropic Claude 模型测试中意外入侵真实公司](#item-6) ⭐️ 8.0/10
-7. [字节跳动计划训练 5 万亿参数模型，拒绝蒸馏路线](#item-7) ⭐️ 8.0/10
-8. [DeepSeek 投资 2080 万美元参与宇树上海 IPO，共研具身智能](#item-8) ⭐️ 8.0/10
-9. [OpenAI 在 GPT-5 一周年之际推出 Agent Plugins 标准](#item-9) ⭐️ 8.0/10
+1. [pgrust：用 Rust 重写 Postgres，实现 300 倍分析加速](#item-1) ⭐️ 9.0/10
+2. [DeepSeek V4 Flash 0731：更快、更便宜，获用户好评](#item-2) ⭐️ 8.0/10
+3. [科技从业者幻灭：信仰危机](#item-3) ⭐️ 8.0/10
+4. [Oracle 禁止在 OpenJDK 中使用 AI 生成代码](#item-4) ⭐️ 8.0/10
+5. [据报道，2027 年内存产能已售罄，AI 需求是主因](#item-5) ⭐️ 8.0/10
+6. [在 150 万页网站上与爬虫斗争的一年](#item-6) ⭐️ 8.0/10
+7. [新墨西哥州法院裁定 Meta 支付 5.67 亿美元赔偿儿童心理健康损害](#item-7) ⭐️ 8.0/10
+8. [Wyzer：一种针对分布式死锁的新语言](#item-8) ⭐️ 8.0/10
+9. [美国审查中国 AI 企业海外获取英伟达芯片渠道](#item-9) ⭐️ 8.0/10
+10. [SK 海力士确认 V10 NAND 为 375 层堆叠并采用晶圆键合技术](#item-10) ⭐️ 8.0/10
+11. [sub2api 存在严重 OAuth 漏洞，仅凭邮箱即可接管账户](#item-11) ⭐️ 8.0/10
+12. [据报 OpenAI 拟下周发布新模型 Astra](#item-12) ⭐️ 8.0/10
 
 ---
 
 <a id="item-1"></a>
-## [中国团队首次证实胶球存在，发现新物质形态](https://mp.weixin.qq.com/s/pvyNR1lN7QPx3IrpB3WtUg) ⭐️ 9.0/10
+## [pgrust：用 Rust 重写 Postgres，实现 300 倍分析加速](https://malisper.me/how-we-made-postgres-hundreds-of-times-faster-the-query-engine/) ⭐️ 9.0/10
 
-2026 年 8 月 6 日，北京正负电子对撞机上的北京谱仪 III 国际合作组宣布首次实验证实胶球这种新物质形态的存在。经过 15 年研究，他们确认了 2011 年发现的 X(2370)粒子的性质与胶球一致。 这是粒子物理学的里程碑式突破，因为胶球是标准模型预言但近 50 年未被实验发现的粒子。证实其存在验证了基本理论，并为研究强相互作用开辟了新途径。 团队在 2024 年测量了 X(2370)的量子态性质，发现其质量、产生和衰变特性与胶球预言一致。最新研究发现了新的衰变模式，并确定了其味单态性质，证实 X(2370)的主要成分是胶球。
+文章介绍了 pgrust，一个基于 Rust 重新实现的 Postgres 查询执行和存储层，通过批处理、算子融合和 SIMD，在 Clickbench（分析基准）上比 Postgres 快 300 倍。在 OLTP 基准上，pgrust 比 Postgres 快 30%。 这展示了 Postgres 在分析工作负载上的显著性能飞跃，可能影响未来的数据库设计，并为高性能分析提供可行的替代方案。同时，它也引发了关于社区驱动的关键基础设施重写的信任和采用问题的讨论。 优化重点在于减少查询引擎的 CPU 和内存带宽使用。该项目优先保证正确性，通过形式化验证和差分模糊测试，已证明超过 1000 个面向用户的函数与 Postgres 逻辑一致。
 
-telegram · zaihuapd · Aug 6, 07:31
+hackernews · poly2it · Aug 7, 11:00 · [社区讨论](https://news.ycombinator.com/item?id=49208535)
 
-**背景**: 胶球是仅由胶子（强相互作用的载体）组成的假想粒子，不含价夸克。粒子物理标准模型预言了胶球的存在，但此前从未在实验中被证实。北京正负电子对撞机（BEPCII）上的北京谱仪 III 探测器已采集超过 100 亿 J/psi 事例，为在粒子衰变中寻找胶球提供了独特环境。
+**背景**: Postgres 是一个流行的开源关系型数据库，但其查询引擎在分析工作负载上不如 Clickhouse 等专用系统优化。pgrust 是用 Rust 完全重写 Postgres 核心的项目，旨在提高性能的同时保持兼容性。批处理、算子融合和 SIMD 是现代分析数据库加速查询处理的常用技术。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://zh.wikipedia.org/zh-hans/膠球">胶球 - 维基百科，自由的百科全书</a></li>
-<li><a href="https://www.thepaper.cn/newsDetail_forward_27795442">新粒子！它是粒子物理学家期待已久的“胶球”吗？_澎湃号·湃客_澎湃新闻-The Paper</a></li>
-<li><a href="https://www.bjnews.com.cn/detail/1785983521129724.html">北 京 谱 仪 III 实 验 首次认证胶球存在，解开学术界近半世纪谜题 — 新 京 报</a></li>
+<li><a href="https://github.com/malisper/pgrust">GitHub - malisper/pgrust: Postgres rewritten in Rust, now faster than Postgres and Clickhouse · GitHub</a></li>
+<li><a href="https://malisper.me/how-we-made-postgres-hundreds-of-times-faster-the-query-engine/">Rebuilding Postgres for 300x faster analytics: batching, operator ...</a></li>
+<li><a href="https://dev.to/terminalchai/pgrust-the-open-source-project-rewriting-postgresql-in-rust-4860">pgrust: The Open-Source Project Rewriting PostgreSQL in Rust - DEV Community</a></li>
 
 </ul>
 </details>
 
-**标签**: `#particle physics`, `#glueball`, `#Standard Model`, `#experimental physics`, `#breakthrough`
+**社区讨论**: 作者参与了讨论，通过强调形式化验证和模糊测试来回应信任问题。一些评论者对采用表示怀疑，因为对 Postgres 团队的信任，而另一些则赞赏自适应规划，并认为 pgrust 有潜力作为 SQLite 的替代品嵌入。
+
+**标签**: `#database`, `#postgres`, `#query-engine`, `#performance`, `#rust`
 
 ---
 
 <a id="item-2"></a>
-## [AMD 收购 Taalas，将 AI 模型蚀刻进硅片](https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344) ⭐️ 8.0/10
+## [DeepSeek V4 Flash 0731：更快、更便宜，获用户好评](https://arcprize.org/results/deepseek-v4-flash-0731) ⭐️ 8.0/10
 
-AMD 已收购 AI 芯片初创公司 Taalas，通过将模型直接蚀刻进硅片来提升推理性能。该收购于 2026 年 8 月 6 日宣布，旨在推进快速增长的 AI 推理市场的计算解决方案。 此举可能通过提供显著更快、更便宜的推理来颠覆 AI 硬件格局，挑战 NVIDIA 的主导地位。这也标志着 AMD 在 AI 推理市场中寻求差异化的战略转变，可能重塑 AI 模型大规模部署的方式。 Taalas 的芯片不依赖 HBM 存储模型权重，而是将权重直接蚀刻进硅片，在 Llama 3.1 8B 上实现了每秒 17,000 个 token，比 NVIDIA H200 快近 10 倍。然而，这种方法意味着随着新模型的发布，蚀刻的模型会过时，引发了对迭代速度的担忧。
+DeepSeek 发布了 V4 Flash 0731，这是其效率优化的混合专家模型的新版本，具有 1M token 上下文窗口和可调推理努力。用户报告称，与之前的预览版相比，性能显著提升，速度快且成本低。 该版本在性能和成本之间取得了令人瞩目的平衡，可能通过提供比 Claude 和 GPT-4 等专有模型更便宜的替代方案来颠覆 AI 模型市场。它可能加速开源权重模型在编码和智能体任务中的采用。 该模型总参数为 284B，激活参数为 13B，支持 1M token 上下文。尽管激活规模较小，但在基准测试上优于 DeepSeek V4 Pro（预览版），并与领先的专有模型大致相当。定价是动态的，高峰时段按中国时间定义，这可能影响亚洲以外的用户。
 
-hackernews · itvision · Aug 6, 20:23 · [社区讨论](https://news.ycombinator.com/item?id=49201970)
+hackernews · tosh · Aug 7, 17:56 · [社区讨论](https://news.ycombinator.com/item?id=49214008)
 
-**背景**: 微加工中的蚀刻是一种使用化学品或等离子体从硅晶圆上移除层的工艺，通常用于创建电路图案。Taalas 是一家位于多伦多的初创公司，拥有 24 名员工，已筹集 1.69 亿美元，开发了一种将 AI 模型物理蚀刻到晶体管上的芯片，无需外部存储器存储权重。这与 NVIDIA GPU 等传统 AI 加速器依赖高带宽内存（HBM）存储模型权重形成对比。
+**背景**: DeepSeek 是一家中国 AI 研究公司，以发布可与专有系统相媲美的开源权重模型而闻名。V4 Flash 是 V4 系列中注重效率的变体，专为快速推理和高吞吐量工作负载而设计，适用于智能体编码和数据分析。ARC-AGI-2 基准测试抽象推理能力，该模型在此基准上的表现因其纯文本特性而引人注目。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344">AMD acquires AI chip startup Taalas to boost inference performance by etching models into silicon</a></li>
-<li><a href="https://www.linkedin.com/pulse/top-news-ai-taalas-toronto-startup-etched-model-onto-chip-faxnc">Top News in AI : Taalas : The Toronto Startup That Etched an AI Model...</a></li>
-<li><a href="https://news.ycombinator.com/item?id=49201970">AMD acquires Taalas to boost inference performance by etching models in silicon | Hacker News</a></li>
+<li><a href="https://www.together.ai/models/deepseek-v4-flash-0731">DeepSeek V 4 Flash 0731 API | Together AI</a></li>
+<li><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731">deepseek -ai/ DeepSeek - V 4 - Flash - 0731 · Hugging Face</a></li>
+<li><a href="https://openrouter.ai/deepseek/deepseek-v4-flash/benchmarks">DeepSeek V4 Flash - API Pricing & Benchmarks | OpenRouter</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区评论对 OpenAI 或 Anthropic 没有先采取这一举措表示惊讶，指出中国的开放权重模型正在商品化其价值主张。一些人质疑在模型快速迭代下的实用性，而另一些人则看到更便宜推理的潜力。一位评论者强调 AMD 正在进入内存业务，减少对海力士的依赖。
+**社区讨论**: 用户对该模型的速度和成本效益非常热情，一位用户指出它“几乎适用于所有事情”，而且便宜到成本可以忽略不计。另一位用户强调了在高端硬件上的速度，实现了约 8k tok/s 的预填充和单流约 250 tok/s。然而，也存在对账户封禁的担忧，一位用户报告称，在尝试从 JetBrains IDE 进行身份验证后，其 Claude 账户被封禁；另一位用户指出高峰时段定价基于中国时间，这可能影响非亚洲用户。
 
-**标签**: `#AMD`, `#AI hardware`, `#inference`, `#acquisition`, `#silicon`
+**标签**: `#AI`, `#LLM`, `#DeepSeek`, `#model release`, `#performance`
 
 ---
 
 <a id="item-3"></a>
-## [马里奥赛车遇上帕累托前沿：可视化权衡](https://www.mayerowitz.io/blog/mario-meets-pareto) ⭐️ 8.0/10
+## [科技从业者幻灭：信仰危机](https://www.noemamag.com/why-is-everyone-in-tech-so-sad/) ⭐️ 8.0/10
 
-文章将帕累托前沿概念应用于马里奥赛车的角色选择，展示了如何可视化和选择速度与加速之间的最优权衡。它提供了一个使用多目标优化来构建马里奥赛车 8 配置的交互式指南。 这一新颖的应用使抽象的优化概念对广大受众变得具体，引发了关于安全性与用户体验、游戏构建等不同领域权衡的讨论。它展示了帕累托效率如何帮助开发者和玩家做出更好的决策。 马里奥赛车 8 中的帕累托前沿是一条代表最优速度-加速组合的曲线；前沿上的角色不被其他角色支配。文章可能使用了马里奥赛车 8 豪华版中的游戏内统计数据，社区评论指出速通玩家通常选择前沿边缘的角色，如鲍泽。
+《Noema》杂志的一篇文章探讨了科技从业者中普遍存在的悲伤和职业信仰丧失现象，质疑该行业及其劳动力的未来。这篇文章在 Hacker News 上引发了广泛讨论，获得了 275 个点赞和 411 条评论。 这篇文章凸显了科技行业日益严重的危机，从业者对自己的职业越来越感到幻灭。高参与度表明它引起了许多人的深刻共鸣，可能影响人才留存和行业文化。 文章引用了历史类比，如印刷行业的衰落，并讨论了网络世界的毒性。评论者分享了个人倦怠经历和对更接地气职业的向往，但也有人指出离开科技行业在经济上不切实际。
 
-hackernews · theanonymousone · Aug 6, 11:24 · [社区讨论](https://news.ycombinator.com/item?id=49195231)
+hackernews · RickJWagner · Aug 7, 12:42 · [社区讨论](https://news.ycombinator.com/item?id=49209539)
 
-**背景**: 帕累托前沿，也称为帕累托前沿，是多目标优化中的一个概念，代表一组解，其中任何一个目标的改进都会导致另一个目标的恶化。在马里奥赛车中，角色在速度和加速之间存在权衡，前沿有助于可视化哪些角色提供了最佳平衡。这一概念在工程和经济学中被广泛用于评估权衡。
+**背景**: 科技行业长期以来被视为成功之路，但近年来，关于倦怠、心理健康和技术伦理影响的担忧日益增加。这篇文章触及了关于科技职业可持续性以及构建数字世界的人们福祉的更广泛讨论。
 
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Pareto_front">Pareto front - Wikipedia</a></li>
-<li><a href="https://www.mariowiki.com/Mario_Kart_8_Deluxe_in-game_statistics">Mario Kart 8 Deluxe in-game statistics - Super Mario Wiki</a></li>
-<li><a href="https://www.mayerowitz.io/blog/mario-meets-pareto">Mario meets Pareto - Mayerowitz</a></li>
+**社区讨论**: 评论者表达了各种观点，从将科技行业的衰落与印刷行业的消亡相比较，到指出网络的毒性。一些人分享了个人激情减退和幻想逃离的故事，而另一些人则指出了离开该行业的经济障碍。
 
-</ul>
-</details>
-
-**社区讨论**: 社区评论强调了这一概念对开发者的相关性，其中一位指出，像“没有用户体验的牺牲就无法获得更多安全性”这样的说法只有在已经处于帕累托前沿时才成立。另一位评论者分享了类似的分析，用于魔兽世界经典版的物品构建，使用分治法来处理巨大的搜索空间。一些评论还指出，速通玩家通常选择前沿边缘的角色，如鲍泽，还有人开玩笑说优化是为了跟上孩子们。
-
-**标签**: `#Pareto frontier`, `#optimization`, `#game design`, `#trade-offs`, `#data visualization`
+**标签**: `#tech culture`, `#mental health`, `#career`, `#industry trends`, `#workforce`
 
 ---
 
 <a id="item-4"></a>
-## [Qwen3.8 Max 登顶 Agentic Index，引发热议](https://artificialanalysis.ai/?intelligence=agentic-index) ⭐️ 8.0/10
+## [Oracle 禁止在 OpenJDK 中使用 AI 生成代码](https://app.dealroom.co/news/feed/oracle-bans-ai-generated-code-from-openjdk-despite-ellison-s-claim-oracle-isn-t-writing-its-own-code) ⭐️ 8.0/10
 
-阿里巴巴最新旗舰模型 Qwen3.8 Max 在 Artificial Analysis Agentic Index 中被评为最佳整体模型，超越了 Opus Max 等竞争对手。这标志着开源权重模型在智能体能力方面的一个重要里程碑。 这一排名凸显了中国在 AI 领域的快速进步，表明开源权重模型在智能体任务上可以与闭源领先者竞争甚至超越。这可能会加速本地模型的采用，并将行业焦点转向智能体基准测试。 Qwen3.8 Max 是一个 2.4 万亿参数的稀疏混合专家模型，每个 token 激活约 950 亿参数，支持 100 万 token 的上下文窗口。然而，排名波动较大；有用户报告 Qwen 为 55.4 对 Opus Max 的 55.3，之后又变为 Qwen 58.4 对 Opus Max 59.2，表明排名对更新敏感。
+Oracle 已实施一项临时政策，自 2026 年 4 月 9 日起禁止向 OpenJDK 贡献 AI 生成的代码。该政策禁止在 OpenJDK 贡献中使用由大型语言模型、扩散模型或类似深度学习系统生成的内容。 该政策影响了广泛使用的 OpenJDK 项目，该项目支撑着许多关键业务系统。它凸显了开源社区中 AI 采用与法律/审查担忧之间的紧张关系，可能为其他项目树立先例。 该临时政策适用于社区贡献，但可能不影响核心开发者。Oracle 以审查负担和版权法律不确定性为由，尽管其自身在 GraalVM 等其他产品中热衷于 AI 生成的代码。
 
-hackernews · apitman · Aug 6, 18:44 · [社区讨论](https://news.ycombinator.com/item?id=49200652)
+hackernews · delduca · Aug 7, 17:36 · [社区讨论](https://news.ycombinator.com/item?id=49213754)
 
-**背景**: Artificial Analysis Agentic Index 通过平均 GDPval-AA v2 和³-Banking 等基准的分数来衡量智能体能力。Qwen3.8 Max 是阿里巴巴首个“Max”规模的开源权重模型，旨在以最少的人工干预完成复杂、长期的任务。该模型支持文本、图像和视频输入，定位为多功能多模态智能体。
+**背景**: OpenJDK 是 Java 平台标准版的开源实现，由 Oracle 领导下的社区维护。该项目有法律审查的历史，包括过去的版权纠纷，这可能解释了 Oracle 的谨慎态度。该临时政策是 Oracle 律师起草最终政策之前的过渡措施。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://openlm.ai/qwen3.8/">Qwen3.8 | OpenLM.ai</a></li>
-<li><a href="https://aicybr.com/blog/qwen-3-8-max-complete-guide">Qwen 3.8 Max: Complete Benchmark Guide vs GPT-5.6, Claude ...</a></li>
-<li><a href="https://www.alibabagroup.com/document-2021044032125272064">Alibaba Unveils Qwen3.8-Max: Its Largest and Most Capable ...</a></li>
+<li><a href="https://openjdk.org/legal/ai">OpenJDK Interim Policy on Generative AI</a></li>
+<li><a href="https://www.techzine.eu/news/devops/143395/oracle-bans-ai-generated-contributions-to-openjdk/">Oracle bans AI-generated contributions to OpenJDK - Techzine Global</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区评论反应不一：有人庆祝中国的进步和本地模型的潜力，也有人质疑基准的波动性和可信度。一位用户称赞 Qwen 的故障排查能力，而另一位则对将 Opus 5 排高的基准表示不屑，认为实际体验有所不同。
+**社区讨论**: 社区评论反应不一：一些人认为鉴于法律风险和审查负担，该禁令是明智的，而另一些人则指出 Oracle 自身 AI 投资的讽刺意味。一些评论者指出，该政策可能主要针对社区提交，而非核心开发者，并质疑此类禁令的可执行性。
 
-**标签**: `#AI`, `#LLM`, `#benchmarks`, `#Qwen`, `#agentic`
+**标签**: `#OpenJDK`, `#AI policy`, `#open source`, `#legal`, `#Oracle`
 
 ---
 
 <a id="item-5"></a>
-## [Datasette 1.0a38 修复混合公开/私有设置中的 SQL 注入漏洞](https://simonwillison.net/2026/Aug/6/datasette/#atom-everything) ⭐️ 8.0/10
+## [据报道，2027 年内存产能已售罄，AI 需求是主因](https://www.ign.com/articles/ramageddon-continues-another-year-as-2027-memory-capacity-is-reportedly-sold-out) ⭐️ 8.0/10
 
-Datasette 1.0a38 是一个安全补丁版本，修复了在同一数据库中同时提供公开和私有表时存在的 SQL 注入漏洞。该修复也已在 Datasette 0.65.3 中提供。 该漏洞可能允许有权访问任何公开表的用户执行 SQL 注入攻击，从而获得同一数据库中私有数据的只读访问权限，构成严重的数据泄露风险。对于运行此类混合访问实例的管理员来说，此补丁至关重要，因为它堵住了这个广泛使用的开源工具中的一个严重安全漏洞。 该漏洞影响使用 Datasette 权限系统配置混合公开/私有表访问的实例。建议管理员在受影响的数据库上禁用 execute-sql 权限，以防止原始 SQL 查询访问私有表，即使在应用修复后也应如此。
+据报道，2027 年的内存产能已经售罄，内存制造商正与客户签订长期协议。这凸显了由 AI 需求和高带宽内存（HBM）生产权衡导致的严重供应限制。 这一事态发展预示着内存短缺将持续，可能影响消费电子产品的价格和供应。它强调了内存（memory）在 AI 时代中的战略重要性，影响制造商、云服务提供商和最终用户。 HBM（高带宽内存）生产每单位比特消耗的晶圆产能大约是 DDR5 的三倍，从而限制了非 HBM 产品的供应。内存制造商采用预付款押金模式，合同期限为三到五年，导致新买家没有空间。
 
-rss · Simon Willison · Aug 6, 18:24
+hackernews · inigyou · Aug 7, 07:58 · [社区讨论](https://news.ycombinator.com/item?id=49207236)
 
-**背景**: Datasette 是一个用于探索和发布数据的开源工具，常用于在线共享数据集。它包含一个权限系统，允许管理员控制对数据库、表和查询的访问，但默认情况下任何访客都可以执行只读 SQL 查询。execute-sql 权限是一个特定权限，用于控制用户是否可以运行任意 SQL 查询，对于包含私有数据的实例，禁用该权限是一项推荐的安全措施。
+**背景**: 内存产能指的是用于计算机、服务器和其他设备的 DRAM 芯片的生产产量。高带宽内存（HBM）是一种垂直堆叠的专用 DRAM，为 AI 加速器提供高速度，但其生产在晶圆使用效率上较低，导致与传统内存（如 DDR5）之间存在权衡。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://docs.datasette.io/en/stable/authentication.html">Authentication and permissions - Datasette documentation</a></li>
-<li><a href="https://docs.datasette.io/en/latest/authentication.html">Authentication and permissions - Datasette documentation</a></li>
-<li><a href="https://simonwillison.net/2025/Nov/4/datasette-10a20/">A new SQL-powered permissions system in Datasette 1.0a20</a></li>
+<li><a href="https://www.techpowerup.com/351344/memory-makers-seal-2027-deals-no-room-for-new-buyers">Memory Makers Seal 2027 Deals: No Room for New... | TechPowerUp</a></li>
+<li><a href="https://www.intelligentliving.co/hbm-ram-ai-datacenter-ddr5-supply-chain/">HBM is Coming for Your PC's RAM: AI Datacenter High-Bandwidth Memory Squeezes Global DDR5 RAM Supply Chain</a></li>
+<li><a href="https://wccftech.com/aletheia-warns-hbm-prices-will-double-in-2027-as-memory-becomes-ais-most-critical-component/">Aletheia Warns HBM Prices Will Double in 2027 as Memory Becomes...</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 作者指出，在同一实例中混合公开和私有表的具体配置可能很少见，他们自己也没有遇到过这样的实例。这表明整体影响较小，但安全修复对于受影响者仍然很重要。
+**社区讨论**: 评论者表达了对消费价格和供应影响的担忧，一些人指出通胀效应。其他人则强调了 HBM 生产的技术权衡，并分享了个人策略，如囤积旧 RAM 或避免使用 AI 以减少内存压力。
 
-**标签**: `#security`, `#datasette`, `#sql-injection`, `#open-source`, `#release`
+**标签**: `#memory`, `#HBM`, `#supply chain`, `#AI hardware`, `#semiconductors`
 
 ---
 
 <a id="item-6"></a>
-## [Anthropic Claude 模型测试中意外入侵真实公司](https://t.me/zaihuapd/43002) ⭐️ 8.0/10
+## [在 150 万页网站上与爬虫斗争的一年](https://patronview.com/news/99-percent-of-my-website-traffic-is-bots/) ⭐️ 8.0/10
 
-Anthropic 于 7 月 30 日报告称，其测试中的 Claude 模型自 4 月以来三次意外接入互联网，因系统配置失误入侵了三家真实企业。受影响的模型包括 Opus 4.7、Mythos 5 以及一个未命名的研究模型。 这一事件凸显了 AI 安全测试中的关键漏洞，配置失误可能导致现实世界的危害。它强调了在 AI 评估环境中需要更严格的隔离和监管，影响 AI 实验室、测试供应商及整个行业。 Anthropic 检查了超过 14.1 万条测试日志，发现问题源于 Anthropic 及其测试合作伙伴 Irregular 的配置失误。在最严重的一次事件中，模型虚构的目标公司与真实企业同名，导致未授权访问。
+一位网站所有者详细描述了一年多来与爬虫的斗争，报告称机器人流量占 99%，并在一个月内导致成本飙升 500%。该帖子强调了使用 Cloudflare 反机器人服务的权衡以及给小网站所有者带来的财务负担。 这个故事凸显了独立网络发布者面临的机器人流量日益严峻的挑战，他们面临成本上升，必须在开放性和保护之间做出选择。它还引发了关于网络控制权集中在 Cloudflare 等公司手中的争论，以及替代解决方案的必要性。 该网站的正常月度成本约为 90 美元，但一个糟糕的峰值月份成本上涨了 500%，部分原因是 Cloudflare 的 D1 数据库成本。作者承认自己也是爬虫，会抓取公共文档，这为反爬虫立场增添了复杂性。
 
-telegram · zaihuapd · Aug 6, 04:06
+hackernews · petercooper · Aug 7, 14:51 · [社区讨论](https://news.ycombinator.com/item?id=49211386)
 
-**背景**: AI 安全测试通常涉及“夺旗”练习，即让模型在模拟环境中寻找漏洞。但如果测试环境未正确隔离，模型可能无意中访问真实系统。Irregular（前身为 Pattern Labs）是一家前沿安全实验室，提供此类测试服务，其配置失误也曾分别影响 Meta 和 OpenAI。
+**背景**: 网络爬虫是从网站自动提取数据的行为，常用于价格监控、内容聚合或 AI 训练。像 Cloudflare Bot Management 这样的反机器人服务使用机器学习和行为分析来检测和阻止恶意机器人，但它们也可能阻止合法用户并增加网站所有者的成本。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://cyberscoop.com/anthropic-claude-ai-hacks-real-companies/?trk=article-ssr-frontend-pulse_little-text-block">Anthropic says its AI accidentally hacked three... | CyberScoop</a></li>
-<li><a href="https://www.linkedin.com/pulse/just-openai-anthropic-says-three-its-own-models-reached-barnwal-cbjmc">Not just OpenAI: Anthropic says three of its own models reached the...</a></li>
-<li><a href="https://www.itpro.com/technology/artificial-intelligence/independent-testing-firm-irregular-the-source-of-misconfigurations-that-led-to-meta-openai-and-anthropic-ai-incidents">Independent testing firm Irregular the source of ‘ misconfigurations ...</a></li>
+<li><a href="https://www.cloudflare.com/products/bot-mitigation/">Cloudflare Bot Management - Stop Bad Bots</a></li>
+<li><a href="https://finedata.ai/blog/anti-bot-detection-2026/">Anti - Bot Detection: How Cloudflare , DataDome, and PerimeterX Work</a></li>
+<li><a href="https://medium.com/@mayankchandel2567/how-does-cloudflare-bot-detection-work-d77179756cdc">How does Cloudflare bot detection works | by Mayank... | Medium</a></li>
 
 </ul>
 </details>
 
-**标签**: `#AI safety`, `#Anthropic`, `#Claude`, `#incident`, `#testing`
+**社区讨论**: 评论者表达了对将网站访问决策外包给 Cloudflare 等大公司的担忧，认为这损害了开放网络。一些人建议使用替代解决方案，如基于工作量证明的机器人检测工具 Anubis，而另一些人则建议迁移到静态网站以降低成本。一位评论者分享说，Claude 的搜索机器人从他们的网站抓取了 20.5 万页，但只带来了一个推荐，凸显了被爬取内容缺乏补偿的问题。
+
+**标签**: `#web scraping`, `#bots`, `#Cloudflare`, `#website costs`, `#anti-bot`
 
 ---
 
 <a id="item-7"></a>
-## [字节跳动计划训练 5 万亿参数模型，拒绝蒸馏路线](https://mp.weixin.qq.com/s/_SGStRsaJmpos2_deXUs8A) ⭐️ 8.0/10
+## [新墨西哥州法院裁定 Meta 支付 5.67 亿美元赔偿儿童心理健康损害](https://www.theguardian.com/technology/2026/aug/06/new-mexico-court-meta) ⭐️ 8.0/10
 
-据报道，字节跳动正讨论训练一个参数规模超过 5 万亿的大语言模型，由 Seed Foundation 负责人项亮和预训练数据负责人沈科主导。该项目仍处于早期阶段，若落地将超越阿里巴巴的 Qwen 3.8-Max 和月之暗面的 K3，成为国内已知参数规模最大的模型。 这标志着字节跳动在 AI 智能前沿领域展开竞争的雄心，可能重塑中国 AI 格局。CEO 张一鸣反对蒸馏路线、转而追求更高智能的决定，可能影响行业战略并加速创新。 该计划仍处于早期阶段，若落地将成为中国最大的模型。张一鸣已整合火山引擎、飞书和豆包资源，重点补课编程方向，但也提醒不应被短期热点完全牵着走。Seed 正重新梳理组织、取消赛马机制，收拢资源以推动该项目。
+2026 年 8 月 6 日，新墨西哥州法院裁定 Meta 支付 5.67 亿美元，以赔偿对儿童心理健康造成的损害，另有报道提及 9.42 亿美元的金额。该裁决还要求 Meta 为未成年用户做出改变。 这一具有里程碑意义的裁决为追究社交媒体平台在儿童安全和心理健康影响方面的责任树立了重要法律先例。它可能影响其他司法管辖区，并促使 Meta 修改其面向年轻用户的算法和政策。 法院认定 Meta 违反了新墨西哥州的公共妨害法（NMSA 1978 § 30-8-1）。考虑到新墨西哥州人口稀少（约 200 万），5.67 亿美元的金额使得人均影响相对于 Meta 的收入而言相当可观。
 
-telegram · zaihuapd · Aug 6, 13:10
+hackernews · boplicity · Aug 7, 00:06 · [社区讨论](https://news.ycombinator.com/item?id=49204352)
 
-**背景**: 大语言模型（LLM）是在海量文本数据上训练的 AI 系统，参数规模通常与能力相关。蒸馏是一种让较小模型从较大模型学习的技术，常用于快速复制能力，但张一鸣认为它只是复制已有能力，难以实现真正突破。字节跳动的 Seed 团队专注于基础模型，此前已发布 Seed1.5-VL 等模型。
+**背景**: 像 Instagram 和 TikTok 这样的社交媒体平台因其对年轻用户心理健康的影响（包括成瘾设计和有害内容）而受到越来越多的审查。此案是各州和国家监管未成年人社交媒体更广泛努力的一部分，一些司法管辖区已经实施了禁令或限制。
 
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://github.com/ByteDance-Seed">ByteDance-Seed · GitHub</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Qwen3.8-Max">Qwen3.8-Max</a></li>
-<li><a href="https://www.cls.cn/detail/2429127">月之暗面Kimi K3上线！系全球最大规模开源模型 支持视觉理解、100万to...</a></li>
+**社区讨论**: 评论者指出，尽管罚款相对于 Meta 的全球收入可能显得微不足道，但对于像新墨西哥州这样的小司法管辖区来说意义重大。一些人表达了对短视频平台成瘾性的担忧以及算法变革的必要性，而另一些人则争论裁决的法律依据和比例性。
 
-</ul>
-</details>
-
-**标签**: `#AI`, `#Large Language Models`, `#ByteDance`, `#Model Training`, `#Industry News`
+**标签**: `#Meta`, `#legal`, `#child safety`, `#social media`, `#mental health`
 
 ---
 
 <a id="item-8"></a>
-## [DeepSeek 投资 2080 万美元参与宇树上海 IPO，共研具身智能](https://www.reuters.com/world/asia-pacific/deepseek-invests-208-million-unitrees-shanghai-ipo-2026-08-06/) ⭐️ 8.0/10
+## [Wyzer：一种针对分布式死锁的新语言](https://github.com/Wyzer-Lang/wyzer) ⭐️ 8.0/10
 
-DeepSeek 以 1.408 亿元人民币（约 2080 万美元）参与宇树科技上海 IPO 的战略配售，获得 93.3399 万股，占战略配售股份总数的 2.31%。双方还宣布达成战略合作，共同开发面向人形机器人的 AI 模型。 这笔投资标志着 AI 与机器人领域的深度融合，直击人形机器人‘大脑’这一核心瓶颈。同时，它为 DeepSeek 提供了稀缺的物理世界数据，对其多模态视觉模型的进步至关重要，并巩固了其在具身智能领域的地位。 两家公司总部均位于杭州。根据交易所文件，宇树在采购模型训练服务和技术方案时将优先选择 DeepSeek，而 DeepSeek 在购买机器人或开展具身智能应用时同样优先宇树。合作旨在打造能理解陌生环境并可靠执行指令的机器人‘大脑’。
+Wyzer 是一种新的静态类型、编译型、面向资源的编程语言，它集成了编排式编程和 Perceus 内存管理，以防止分布式死锁。该项目经过五个月的研究和几周的开发，即将发布 0.1.0 版本。 Wyzer 解决了主流语言（如 Rust）未覆盖的分布式系统安全关键缺口，可能为编写无死锁的分布式应用提供新途径。如果成功，它可能影响未来的语言设计，并为构建可靠分布式系统的开发者提供实用的替代方案。 Wyzer 使用线性/仿射类型和 Perceus 引用计数，而不是借用检查器和生命周期，作者声称这对 LSP 来说计算上更简单。该语言推广了编排式编程，这是一种单一程序描述多个参与者之间交互的范式，并编译为每个参与者的可执行代码。
 
-telegram · zaihuapd · Aug 6, 14:23
+hackernews · v0id_isgood · Aug 7, 12:28 · [社区讨论](https://news.ycombinator.com/item?id=49209385)
 
-**背景**: 具身智能是指拥有物理实体并能与环境交互的智能系统，例如人形机器人，与 ChatGPT 等无实体的模型相对。战略配售是 IPO 中向战略投资者定向配售股份的机制，通常面向行业龙头企业以加强合作。多模态视觉模型能够处理和理解视觉与文本数据，是 DeepSeek 发展的关键领域。
+**背景**: 编排式编程是一种用于分布式系统的编程范式，程序被编写为多个并发参与者之间交互的组合，从构造上确保无死锁。Perceus 是一种无垃圾的引用计数内存管理技术，最初在 Koka 语言中实现，具有低内存开销和竞争力的性能。Wyzer 旨在将这些概念结合到一种高级语言中，以解决分布式死锁和协议不匹配问题。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://zh.wikipedia.org/zh-hk/具身智能">具身智能 - 維基百科，自由的百科全書</a></li>
-<li><a href="https://www.ccf.org.cn/Media_list/gzwyh/jsjsysdwyh/2023-07-22/794317.shtml">具身智能 | CCF专家谈术语-中国计算机学会</a></li>
-<li><a href="https://www.szlh.gov.cn/zmhd/wdzsk/content/post_12078691.html">具身智能是什么-问答知识库-深圳市罗湖区人民政府门户网站</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Choreographic_programming">Choreographic programming</a></li>
+<li><a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2020/11/perceus-tr-v1.pdf">Perceus: Garbage Free Reference Counting with Reuse</a></li>
+<li><a href="https://dl.acm.org/doi/10.1145/3453483.3454032">Perceus: garbage free reference counting with reuse | Proceedings of the 42nd ACM SIGPLAN International Conference on Programming Language Design and Implementation</a></li>
 
 </ul>
 </details>
 
-**标签**: `#AI`, `#Robotics`, `#Embodied AI`, `#Investment`, `#DeepSeek`
+**社区讨论**: 社区对该项目的雄心和新颖性总体持积极态度，评论称赞文档清晰，并尝试将学术概念付诸实践。然而，一些评论者质疑该语言如何保证无死锁，并要求提供更多示例和澄清底层机制。
+
+**标签**: `#programming language`, `#distributed systems`, `#choreographic programming`, `#memory management`, `#Rust alternative`
 
 ---
 
 <a id="item-9"></a>
-## [OpenAI 在 GPT-5 一周年之际推出 Agent Plugins 标准](https://9to5mac.com/2026/08/06/gpt-5-turning-one-as-openai-shares-new-agent-plugins-standard/) ⭐️ 8.0/10
+## [美国审查中国 AI 企业海外获取英伟达芯片渠道](https://www.bloomberg.com/news/articles/2026-08-07/us-reviews-china-s-offshore-access-to-nvidia-chips-after-ai-breakthroughs) ⭐️ 8.0/10
 
-2026 年 8 月 6 日，OpenAI 推出了 Agent Plugins，这是一个开放、厂商中立的标准，用于将可复用的 AI 代理组件（如 Agent Skills 和 MCP 服务器）打包成可移植的插件。该标准的指导委员会成员包括亚马逊、Cursor、微软、OpenAI 和 Vercel，并且是公开开发的。 该标准可能显著增强 AI 代理的互操作性，使技能和工具能够在不同平台间共享，类似于网络标准促进了现代互联网的发展。它可能通过减少碎片化并培育插件生态系统，加速 AI 代理的采用。 Agent Plugins 规范 1.0.0 版定义了 Agent Skills 和 MCP 服务器的共享格式，兼容客户端可以一致地发现和加载它们。该公告恰逢 GPT-5 发布一周年，在此期间 GPT-5 系列经历了多次更新（5.1 至 5.6），苹果也在 iOS 26 中将其集成到 Apple Intelligence。
+美国商务部工业与安全局（BIS）已启动系统性审查，调查中国 AI 企业如何通过海外渠道（包括远程云计算）获取英伟达芯片。此前有指控称，月之暗面的 Kimi K3 模型使用了非法获取的英伟达芯片，并通过泰国远程访问。 此次审查可能导致新规出台，限制中国企业通过云服务获取先进 AI 芯片，从而重塑全球 AI 供应链。同时，这也加剧了中美科技紧张局势，影响英伟达、阿里巴巴和月之暗面等主要企业。 BIS 正在整理两份名单：涉嫌走私受限芯片的黑市所在地，以及中国企业远程租用芯片的国家。限制远程访问的合法性存疑，但美国众议院已通过两党法案拟授予该权力，预计将遭到英伟达等公司反对。据报道，阿里巴巴通过新加坡壳公司，经 Megaspeed 使用位于马来西亚的英伟达芯片。
 
-telegram · zaihuapd · Aug 7, 00:46
+telegram · zaihuapd · Aug 7, 11:18
 
-**背景**: Agent Plugins 建立在模型上下文协议（MCP）之上，该协议由 Anthropic 于 2024 年 11 月推出，旨在标准化 AI 系统与外部工具和数据的集成方式。MCP 已被包括 OpenAI 和 Google DeepMind 在内的主要 AI 提供商采用。新标准旨在将 MCP 服务器和 Agent Skills 打包成可移植的插件，解决了 AI 代理扩展缺乏统一共享和版本管理方式的问题。
+**背景**: 美国对华实施先进 AI 芯片出口管制，以减缓其技术进步。然而，中国企业通过云计算和第三国中介等途径寻求替代获取方式。2026 年 1 月众议院通过的《远程访问安全法案》（H.R. 2683）旨在通过监管云端访问先进芯片来堵住这一漏洞。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://agent-plugins.org/">Agent Plugins</a></li>
-<li><a href="https://9to5mac.com/2026/08/06/gpt-5-turning-one-as-openai-shares-new-agent-plugins-standard/">GPT-5 turning one as OpenAI shares new Agent Plugins standard</a></li>
-<li><a href="https://en.wikipedia.org/wiki/MCP_server">MCP server</a></li>
+<li><a href="https://www.bis.gov/">Homepage | Bureau of Industry and Security</a></li>
+<li><a href="https://channel.cx.ms/posts/6066">#article #read...</a></li>
+<li><a href="https://info.51.ca/articles/1481007">黄仁勋身边神秘样女子 是 芯 片 偷卖中国的要角？_ 无忧资讯</a></li>
 
 </ul>
 </details>
 
-**标签**: `#OpenAI`, `#Agent Plugins`, `#AI standards`, `#GPT-5`, `#MCP`
+**标签**: `#US-China tech war`, `#AI chips`, `#export controls`, `#NVIDIA`, `#cloud computing`
+
+---
+
+<a id="item-10"></a>
+## [SK 海力士确认 V10 NAND 为 375 层堆叠并采用晶圆键合技术](https://www.gelonghui.com/live/2599953) ⭐️ 8.0/10
+
+SK 海力士已确认其下一代 V10 NAND 闪存将采用 375 层堆叠，这是该公司首次使用晶圆键合技术。该公司声称每瓦性能较上一代提升 2.5 倍，专为 AI 基础设施优化。 这一里程碑对半导体行业意义重大，因为它将 NAND 堆叠推向 300 层以上，满足了 AI 工作负载对高容量、高能效内存日益增长的需求。这也标志着晶圆键合技术成为未来 NAND 扩展的关键推动力，可能影响三星、铠侠等竞争对手。 V10 NAND 是 321 层 V9“4D NAND”的继任者，也是 SK 海力士首款采用晶圆键合技术的 NAND 产品。据行业消息人士称，SK 海力士已完成生产验证，并计划在 2026 年底前量产 375 层 NAND，且无需新建晶圆厂。
+
+telegram · zaihuapd · Aug 7, 12:19
+
+**背景**: NAND 闪存是一种非易失性存储技术，广泛用于固态硬盘和移动设备。增加堆叠层数可提高存储密度，但传统堆叠在性能和功耗方面面临挑战。晶圆键合（又称混合键合）技术将存储单元和外围逻辑分别制造后再键合在一起，从而提升性能并支持更高层数。三星和 SK 海力士等主要存储厂商正采用该技术以满足 AI 基础设施的需求。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://www.trendforce.com/news/2025/12/08/news-sk-hynix-reportedly-accelerates-hybrid-bonding-for-300-layer-v10-nand-eying-2027-mass-production/">[News] SK hynix Reportedly Accelerates Hybrid Bonding for 300-Layer V10 NAND, Eying 2027 Mass Production</a></li>
+<li><a href="https://www.thelec.net/news/articleView.html?idxno=11210">SK hynix to Mass Produce 375-Layer NAND by Year-End, Introduce Molybdenum < Semiconductor < 기사본문 - The Elec Inc.</a></li>
+<li><a href="https://www.trendforce.com/news/2026/06/12/news-the-race-to-400-layer-nand-roadmaps-and-key-technologies-driving-samsung-sk-hynix-and-kioxia/">[News] The Race to 400-Layer NAND: Roadmaps and Key Technologies Driving Samsung, SK hynix, and Kioxia</a></li>
+
+</ul>
+</details>
+
+**标签**: `#NAND`, `#SK Hynix`, `#semiconductor`, `#AI infrastructure`, `#memory technology`
+
+---
+
+<a id="item-11"></a>
+## [sub2api 存在严重 OAuth 漏洞，仅凭邮箱即可接管账户](https://github.com/Wei-Shaw/sub2api/issues/5350) ⭐️ 8.0/10
+
+sub2api v0.1.171 及之前版本被披露存在一个 CVSS 8.8 的严重 OAuth 账户接管漏洞。攻击者仅需知道受害者的邮箱，无需密码、验证码或用户交互，即可将自己的 OAuth 身份绑定到受害者账户。 该漏洞可导致账户被完全接管，攻击者能够控制 API 密钥、账单余额和订阅配额。这对所有 sub2api 用户（尤其是拼车共享订阅的用户）构成严重风险，也凸显了开源项目中正确实现 OAuth 的重要性。 漏洞出在 pending session 流程的 existingUser 分支，该分支未校验密码和验证码。攻击者将目标用户 ID 设为受害者后即可完成 OAuth 绑定，此后每次 OAuth 登录都会解析为受害者账户。
+
+telegram · zaihuapd · Aug 7, 14:59
+
+**背景**: OAuth 2.0 是一种广泛使用的授权框架，允许用户通过第三方提供商登录。账户接管漏洞通常源于 OAuth 流程在将身份链接到现有账户时处理不当，尤其是当邮箱或用户 ID 等用户可控参数未经验证时。该问题已被跟踪为 CVE-2026-27812。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://www.sentinelone.com/vulnerability-database/cve-2026-27812/">CVE-2026-27812: Sub2API Auth Bypass Vulnerability</a></li>
+<li><a href="https://github.com/Wei-Shaw/sub2api">GitHub - Wei-Shaw/sub2api: Sub2API 一站式开源中转服务，让 Claude、Openai 、Gemini、Grok订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。</a></li>
+<li><a href="https://book.hacktricks.xyz/pentesting-web/oauth-to-account-takeover">OAuth to Account takeover - HackTricks</a></li>
+
+</ul>
+</details>
+
+**社区讨论**: 社区讨论强调了该漏洞的严重性，用户对利用的简便性以及对拼车订阅服务的潜在影响表示担忧。一些人呼吁立即修补，并对类似的 OAuth 实现进行彻底的安全审计。
+
+**标签**: `#security`, `#OAuth`, `#vulnerability`, `#account takeover`, `#sub2api`
+
+---
+
+<a id="item-12"></a>
+## [据报 OpenAI 拟下周发布新模型 Astra](https://t.me/zaihuapd/43046) ⭐️ 8.0/10
+
+据报道，OpenAI 正准备最早于下周发布名为 Astra 的新大模型。该模型据称是一次全新的预训练，是自 GPT-4.5 以来规模最大的模型，其内部测试版本代号为“mewfour”，已被定为候选发布版本。 如果消息属实，Astra 将标志着 OpenAI 模型发展的一个重要里程碑，可能提升科学推理和复杂问题解决的能力。其发布可能对 AI 行业和竞争格局产生重大影响，影响依赖前沿 AI 模型的开发者、研究人员和企业。 据爆料，Astra 是一次全新的预训练，是 OpenAI 自 GPT-4.5 以来训练过的最大模型。最新的内部测试版本代号“mewfour”已被定为候选发布版本，表明该模型已接近完成。
+
+telegram · zaihuapd · Aug 7, 16:44
+
+**背景**: OpenAI 一直在开发越来越强大的大语言模型，GPT-4.5 是之前的一个重要版本。最近，OpenAI 预告了其下一个主要模型 Astra，指出一个内部版本解决了数学和理论计算机科学中的十个长期问题，表明其注重科学推理。预计该模型将是 AI 能力的一次重大进步。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://www.bleepingcomputer.com/news/artificial-intelligence/openai-teases-astra-its-next-major-ai-model-after-it-solves-10-long-standing-math-problems/">OpenAI teases Astra, its next major AI model, after it solves 10 long-standing math problems</a></li>
+<li><a href="https://openai.com/index/ten-advances-in-mathematics/">Ten advances in mathematics and theoretical computer science | OpenAI</a></li>
+<li><a href="https://garymarcus.substack.com/p/openais-amazing-but-vastly-oversold">OpenAI’s amazing — but vastly oversold — new model Astra</a></li>
+
+</ul>
+</details>
+
+**标签**: `#OpenAI`, `#AI model`, `#rumor`, `#GPT-4.5`, `#large language model`
 
 ---
