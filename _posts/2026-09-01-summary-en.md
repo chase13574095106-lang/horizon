@@ -5,142 +5,134 @@ date: 2026-09-01
 lang: en
 ---
 
-> From 30 items, 6 important content pieces were selected
+> From 36 items, 5 important content pieces were selected
 
 ---
 
-1. [Google Removes MV2 Extensions, Including uBlock Origin, from Chrome Web Store](#item-1) ⭐️ 8.0/10
-2. [NAT as the Original Sin of Internet Centralization](#item-2) ⭐️ 8.0/10
-3. [Claude Shared Links Indexed by Search Engines, Leaking User Data](#item-3) ⭐️ 8.0/10
-4. [OpenClaw 2.0: Largest Update with 16K Pull Requests](#item-4) ⭐️ 8.0/10
-5. [Apple Announces CEO Transition: Tim Cook to Step Down, John Ternus to Take Over](#item-5) ⭐️ 8.0/10
-6. [Xiaomi Unveils Three Xuanjie Chips, AI Flagship SoC to Debut in Xiaomi 18 Fold](#item-6) ⭐️ 8.0/10
+1. [Anthropic Releases Claude Fable 5.1 and Mythos 5.1](#item-1) ⭐️ 9.0/10
+2. [Ed Zitron's AI Skeptic Predictions Analyzed for Accuracy](#item-2) ⭐️ 8.0/10
+3. [Small Transformer Trained in 1.5 Hours Beats Many LLMs on ARC](#item-3) ⭐️ 8.0/10
+4. [Apple presents forensic evidence in OpenAI trade secret lawsuit](#item-4) ⭐️ 8.0/10
+5. [Virtualizor Update Infrastructure Hit by BGP Hijacking, Root Backdoor Installed](#item-5) ⭐️ 8.0/10
 
 ---
 
 <a id="item-1"></a>
-## [Google Removes MV2 Extensions, Including uBlock Origin, from Chrome Web Store](https://webiterate.dev/google-removed-extensions-ublock-origin-108/) ⭐️ 8.0/10
+## [Anthropic Releases Claude Fable 5.1 and Mythos 5.1](https://www.anthropic.com/claude-fable-and-mythos-5-1) ⭐️ 9.0/10
 
-Google has removed Manifest V2 (MV2) extensions from the Chrome Web Store, including the popular ad blocker uBlock Origin. This marks the final phase of the MV2 deprecation, with Chrome 150 and 151 eliminating workarounds that allowed MV2 extensions to continue functioning. This affects millions of users who relied on uBlock Origin for effective ad blocking, raising concerns about safety and browser monopoly. It also pressures users to migrate to alternatives like Firefox, which continues to support MV2 extensions. The Chrome Web Store no longer accepts MV2 extensions, and starting June 3, 2026, Chrome Beta, Dev, and Canary channels show warnings for installed MV2 extensions. Chrome 150 (released June 30, 2026) dropped the flag that restored MV2 installs, and Chrome 151 (stable July 28, 2026) removed the AllowLegacyMV2Extensions code path entirely. uBlock Origin received a final update on August 31, 2026, but it will no longer work in Chrome.
+Anthropic has announced the release of Claude Fable 5.1 and Claude Mythos 5.1, which are the same underlying model with different safety guardrails. The new models feature enhanced writing quality, improved performance on science benchmarks, and a significant reduction in cache read pricing from $1/M to $0.25/M. This release is significant because it offers a more natural writing style and improved science capabilities, which could attract users who prioritize these areas. The price reduction for cache reads makes the model more cost-effective for developers, potentially increasing adoption and influencing pricing trends in the LLM market. Claude Fable 5.1 is generally available, while Claude Mythos 5.1 is restricted to trusted access programs like Project Glasswing. The models are identical except for safeguards; Fable 5.1's classifiers route sensitive requests to Claude Opus. The price reduction is attributed to cache read pricing dropping from $1/M to $0.25/M, making Fable 5.1's cache reads half the cost of Opus's.
 
-hackernews · twapi · Aug 31, 21:10 · [Discussion](https://news.ycombinator.com/item?id=49514878)
+hackernews · denysvitali · Sep 1, 17:53 · [Discussion](https://news.ycombinator.com/item?id=49525378)
 
-**Background**: Manifest V3 (MV3) is the new extension platform introduced by Google to improve security, privacy, and performance, but it restricts ad-blocking capabilities by limiting the use of blocking web requests. uBlock Origin, a highly effective content blocker, relies on MV2's broader APIs, and its developer has stated that the MV3 version (uBlock Origin Lite) is less powerful. Google began phasing out MV2 in 2024, and by 2026, over 85% of actively maintained extensions have migrated to MV3.
+**Background**: Claude Fable 5 and Claude Mythos 5 are part of Anthropic's Claude model family, with Mythos being the most powerful series. Fable 5 is a 'Mythos-class' model with safeguards, while Mythos 5 is a restricted-access version with fewer safeguards. The 5.1 update brings improvements in writing style and science performance, along with pricing changes.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://developer.chrome.com/docs/extensions/develop/migrate/mv2-deprecation-timeline">Manifest V2 support timeline | Chrome for Developers</a></li>
-<li><a href="https://blog.google/chromium/manifest-v2-phase-out-begins/">Manifest V2 phase-out begins</a></li>
-<li><a href="https://appuals.com/ublock-origin-not-working-manifest-v2-shutdown/">uBlock Origin Not Working in Chrome? Fixes After ... - Appuals</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Claude_Fable_5">Claude Fable 5</a></li>
+<li><a href="https://platform.claude.com/docs/en/models/fable-5-1/overview">Claude Fable 5.1 - Claude Platform Docs</a></li>
+<li><a href="https://www.anthropic.com/claude-fable-and-mythos-5-1">Introducing Claude Fable 5.1 and Claude Mythos 5.1 \\ Anthropic</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community comments express strong dissatisfaction with Google's decision, framing ad blocking as a safety issue, especially for less tech-savvy users. Many users recommend switching to Firefox, which continues to support uBlock Origin effectively, and criticize Google's unilateral control over the web.
+**Discussion**: Community comments highlight positive feedback on the improved writing style, with an Anthropic employee noting it sounds more natural. Simon Willison shared examples of the model's thinking effort levels. Some users discussed the price reduction, speculating it may reflect lower demand for Fable at its original pricing, and noted that aside from Terminal-Bench-Science, improvements are hard to see. Others mentioned that breaking changes address chain-of-thought disclosure vulnerabilities.
 
-**Tags**: `#Chrome`, `#Manifest V2`, `#ad-blocking`, `#uBlock Origin`, `#browser`
+**Tags**: `#AI`, `#Anthropic`, `#Claude`, `#LLM`, `#Machine Learning`
 
 ---
 
 <a id="item-2"></a>
-## [NAT as the Original Sin of Internet Centralization](https://dreamstation.systems/personal/ntppost.html) ⭐️ 8.0/10
+## [Ed Zitron's AI Skeptic Predictions Analyzed for Accuracy](https://danluu.com/zitron/) ⭐️ 8.0/10
 
-An essay argues that Network Address Translation (NAT) is a root cause of internet centralization, sparking a discussion where the original Linux NAT implementer, Rusty Russell, acknowledges his role in eroding public endpoints. This debate highlights how a technical workaround for IPv4 address scarcity has shaped the modern internet's client-server model and centralization, affecting anyone who runs servers or values a decentralized web. Rusty Russell explains that his implementation avoided port reservation to squeeze more connections into one IP address, making incoming traffic from different addresses unroutable. The discussion also contrasts regular NAT with Carrier Grade NAT (CGNAT), which is seen as more restrictive.
+Dan Luu published a detailed analysis examining the accuracy of Ed Zitron's AI skeptic predictions, comparing them against actual outcomes. The post evaluates Zitron's claims about AI hype and financial reporting, providing a nuanced look at his track record. This analysis is significant because it addresses the ongoing debate about AI hype versus reality, a topic that affects investors, technologists, and policymakers. By scrutinizing a prominent skeptic's predictions, it encourages more evidence-based discussions about AI's trajectory and financial sustainability. The post notes that Zitron's predictions have had mixed accuracy, with some being overly pessimistic. It also highlights that Zitron's style often involves overstatement, which can undermine his credibility, similar to AI boosters' exaggerated claims.
 
-hackernews · robinpie · Aug 31, 02:23 · [Discussion](https://news.ycombinator.com/item?id=49504905)
+hackernews · jatins · Sep 1, 18:35 · [Discussion](https://news.ycombinator.com/item?id=49526069)
 
-**Background**: NAT was introduced in RFC 1631 (1994) as a short-term solution to IPv4 address depletion and routing scalability. It maps multiple private IP addresses to a single public IP, conserving address space but breaking the end-to-end principle, which originally allowed any host to act as a server. This has contributed to the rise of centralized services and the client-server model.
+**Background**: Ed Zitron is a technology critic and podcaster known for his skepticism toward AI companies and the generative AI boom. His predictions often focus on financial unsustainability and overhyped claims. Dan Luu, a software engineer and blogger, frequently analyzes tech industry trends with data-driven insights.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Network_address_translation">Network address translation - Wikipedia</a></li>
-<li><a href="https://www.cisco.com/site/us/en/learn/topics/networking/what-is-network-address-translation-nat.html">What Is Network Address Translation (NAT)? - Cisco</a></li>
-<li><a href="https://www.ietf.org/archive/id/draft-nottingham-avoiding-internet-centralization-05.html">Centralization , Decentralization, and Internet Standards</a></li>
+<li><a href="https://danluu.com/zitron/">How accurate have Ed Zitron 's AI skeptic predictions been?</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Ed_Zitron">Ed Zitron - Wikipedia</a></li>
+<li><a href="https://www.vanityfair.com/story/ed-zitron-ai-skeptic-openai">Ed Zitron Is Sounding the Alarm About the AI Bubble. | Vanity Fair</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commenters are divided: some agree that NAT is a significant factor in centralization, while others argue it's an exaggeration, noting that regular NAT is manageable and has protected insecure devices. Rusty Russell's admission adds weight to the critique, but some point out that poor UX and CGNAT are the real problems.
+**Discussion**: Commenters offered varied perspectives: some suggested comparing Zitron's predictions to those of AI leaders like Altman and Amodei, while others argued that Zitron has become a mirror image of the boosters he criticizes. A few noted that financial reporting complexities, such as hyperscalers booking valuation increases as 'Other Income', are often overlooked in such analyses.
 
-**Tags**: `#NAT`, `#internet architecture`, `#centralization`, `#networking`, `#history`
+**Tags**: `#AI`, `#skepticism`, `#predictions`, `#tech industry`, `#analysis`
 
 ---
 
 <a id="item-3"></a>
-## [Claude Shared Links Indexed by Search Engines, Leaking User Data](https://t.me/zaihuapd/43511) ⭐️ 8.0/10
+## [Small Transformer Trained in 1.5 Hours Beats Many LLMs on ARC](https://mvakde.github.io/blog/44-on-arc-1/) ⭐️ 8.0/10
 
-Anthropic's Claude shared conversation links are being indexed by search engines like Google and Bing due to missing noindex tags, exposing sensitive user data. This was confirmed by WIRED and other outlets in late July 2026. This privacy vulnerability affects thousands of users, exposing API keys, cryptocurrency wallets, personal information, and corporate secrets. It underscores the importance of proper privacy controls in AI chat features and could damage trust in Anthropic's platform. The shared links lack the 'noindex' meta tag that search engines respect, and Anthropic's robots.txt disallow rules do not remove already indexed pages. Affected data includes legal consultations, healthcare information, and social security numbers, and Anthropic has not yet fixed the issue.
+A small autoregressive transformer, trained from scratch in just 1.5 hours, achieved competitive results on the ARC benchmark, outperforming many large language models. The author emphasizes that this was achieved without using an LLM, highlighting the potential of sample-efficient, non-LLM approaches. 这一结果挑战了普遍认为复杂推理任务需要大规模模型和巨大计算资源的假设。它表明，样本效率和架构选择可以带来显著的性能提升，可能降低AI研究和应用的门槛。 The model is a small autoregressive transformer, not an LLM, trained from scratch. Key improvements included modern architecture choices (SwiGLU, RMSNorm), data diversity, and scaling to 8 layers. The author also clarified that training on the eval puzzles is not 'training on test' because labels were not used, and ARC is a metalearning benchmark.
 
-telegram · zaihuapd · Aug 31, 03:22
+hackernews · porridgeraisin · Sep 1, 09:52 · [Discussion](https://news.ycombinator.com/item?id=49519939)
 
-**Background**: Claude's shared conversation feature allows users to create public links to their chats. Without a noindex tag, these links can be crawled and indexed by search engines, making them publicly discoverable. Similar issues occurred with ChatGPT about a year ago, which were quickly fixed.
+**Background**: ARC (Abstraction and Reasoning Corpus) is a benchmark designed to measure fluid intelligence, featuring puzzles that are easy for humans but hard for AI. It is often used to evaluate reasoning capabilities beyond standard language tasks. Sample efficiency refers to the ability of a model to learn effectively from limited data, a key challenge in deep learning where models typically require vast amounts of data.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.wired.com/story/private-claude-chats-exposed-in-google-and-bing-search-results/">Private Claude Chats Exposed in Google and Bing Search Results | WIRED</a></li>
-<li><a href="https://www.searchenginejournal.com/indexed-claude-chats-show-why-disallow-is-not-noindex/583852/">Indexed Claude Chats Show Why Disallow Is Not Noindex</a></li>
-<li><a href="https://www.cnet.com/tech/services-and-software/private-claude-conversations-have-been-indexed-by-search-engines/">Private Claude Conversations Have Been Indexed by Search Engines - CNET</a></li>
+<li><a href="https://arcprize.org/">ARC Prize</a></li>
+<li><a href="https://arcprize.org/arc-agi/3">Arc-agi-3</a></li>
+<li><a href="https://benchlm.ai/benchmarks/arc-agi-2">ARC-AGI-2 Leaderboard (September 2026): GPT-5.6 Sol Leads ... - benchlm.ai</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#privacy`, `#security`, `#Claude`, `#Anthropic`, `#data leak`
+**Discussion**: The community discussion is largely positive, with the author actively engaging and clarifying misconceptions. Some commenters praised the achievement, while others raised concerns about methodology, such as 'squeezing the lemon' (incremental improvements) and the potential for overfitting to the benchmark. There is also appreciation for the author's personal story of saving his own life.
+
+**Tags**: `#transformers`, `#ARC`, `#sample efficiency`, `#benchmark`, `#deep learning`
 
 ---
 
 <a id="item-4"></a>
-## [OpenClaw 2.0: Largest Update with 16K Pull Requests](https://openclaw.ai/blog/openclaw-2-accidentally) ⭐️ 8.0/10
+## [Apple presents forensic evidence in OpenAI trade secret lawsuit](https://9to5mac.com/2026/08/31/apple-openai-forensic-macbook-evidence/) ⭐️ 8.0/10
 
-OpenClaw released version 2.0 on August 30, its largest update ever, incorporating over 16,000 pull requests from 933 contributors, including 569 first-time participants. The update spans all aspects of the platform, from installation and messaging to memory, skills, models, browser, plugins, and security. This release marks a significant milestone for OpenClaw, a widely-used open-source project, demonstrating strong community engagement and rapid development. The comprehensive improvements, including enhanced security features like private credential requests, could attract more users and solidify its position in the AI agent ecosystem. The update includes a simplified installation process, a rebuilt browser experience, and new shared cloud sessions for multi-user collaboration. Notably, it introduces a private credential request feature that allows users to securely share credentials with an agent without exposing them in chat.
+Apple has presented forensic evidence in its lawsuit against OpenAI, alleging that a former employee, Mr. Liu, used stolen Apple trade secrets, including a confidential circuit schematic, in his AI work at OpenAI. The evidence includes his use of the schematic in LTspice simulations and attempts to destroy evidence upon learning of Apple's investigation. This case raises novel legal questions about whether feeding trade secrets into AI models constitutes irreversible misappropriation, potentially setting a precedent for how AI training data and proprietary information are treated in law. It also highlights the growing tension between AI development and intellectual property protection, affecting tech companies, legal professionals, and AI researchers. Apple argues that when trade secret information is fed into an AI agent or model that learns from it, that learning may create irreversible and continually propagating uses of the trade secret. Apple also seeks access to a Mac mini that Liu used, which synced via iCloud to the MacBook he took from Apple, raising privacy concerns about personal data on company devices.
 
-telegram · zaihuapd · Aug 31, 04:38
+hackernews · colinprince · Sep 1, 20:19 · [Discussion](https://news.ycombinator.com/item?id=49527573)
 
-**Background**: OpenClaw is an open-source AI agent platform that gained viral attention when it was released late last year. A pull request (PR) is a key collaboration feature in GitHub, allowing developers to propose changes to a codebase, which maintainers review before merging. This update's scale, with over 16,000 PRs, highlights the project's active contributor base and the collaborative nature of open-source development.
+**Background**: Trade secret litigation often relies on digital forensics to uncover evidence of misappropriation, as electronic data leaves traces that can be analyzed. In this case, Apple's forensic evidence includes cloud sync data and simulation files, demonstrating how digital trails can link an employee's actions to proprietary information. The legal framework for AI and trade secrets is still evolving, with courts grappling with how to apply traditional IP laws to AI training and usage.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://mashable.com/tech/openclaw-2-0-released-agentic-ai">OpenClaw 2 . 0 : How to try the updated AI agent, what's new | Mashable</a></li>
-<li><a href="https://docs.openclaw.ai/releases/2026.8.1">v2026.8.1 (AKA OpenClaw 2 . 0 ) - OpenClaw</a></li>
-<li><a href="https://docs.github.com/articles/about-pull-requests?/">Pull requests - GitHub Docs</a></li>
+<li><a href="https://www.alvarezandmarsal.com/thought-leadership/digital-forensics-in-trade-secret-litigation-the-dual-protection-of-technology-and-law">Digital Forensics in Trade Secret Litigation: The Dual Protection of Technology and Law | Alvarez & Marsal | Management Consulting | Professional Services</a></li>
+<li><a href="https://www.thesedonaconference.org/Forensic_Webinar">Webinar on Forensic Issues in Trade Secret Disputes (Public Comment Version) | The Sedona Conference®</a></li>
+<li><a href="https://reelmind.ai/blog/openai-says-deepseek-may-have-improperly-harvested-its-data-ai-ethics-and-data-privacy">OpenAI Says DeepSeek May Have Improperly Harvested Its Data : AI</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#OpenClaw`, `#software release`, `#open source`, `#developer tools`, `#collaboration`
+**Discussion**: Community comments express curiosity about the legal arguments, particularly Apple's claim about irreversible propagation of trade secrets through AI learning. Some commenters highlight privacy implications, noting that personal data on company devices may be subject to legal search. Others draw parallels to historical trade secret cases, such as the Coca-Cola recipe incident, suggesting this case could become a landmark.
+
+**Tags**: `#legal`, `#AI`, `#trade secrets`, `#privacy`, `#Apple`
 
 ---
 
 <a id="item-5"></a>
-## [Apple Announces CEO Transition: Tim Cook to Step Down, John Ternus to Take Over](https://t.me/zaihuapd/43516) ⭐️ 8.0/10
+## [Virtualizor Update Infrastructure Hit by BGP Hijacking, Root Backdoor Installed](https://www.virtualizor.com/blog/security-incident-bgp-hijacking/) ⭐️ 8.0/10
 
-Apple has announced a leadership transition: current CEO Tim Cook will become Executive Chairman of the Board, and John Ternus, Senior Vice President of Hardware Engineering, will become CEO on September 1, 2026. The board has unanimously approved the arrangement. This marks the first CEO change at Apple in over a decade, signaling a new era for the world's most valuable company. Ternus's promotion reflects Apple's continued focus on hardware innovation, and the transition will impact product strategy, investor confidence, and the broader tech industry. Tim Cook will remain CEO through the summer to ensure a smooth transition, while current Chairman Arthur Levinson will become Lead Independent Director on September 1. John Ternus, who joined Apple in 2001 and has led hardware engineering since 2013, will also join the board on the same day.
+Virtualizor's update infrastructure was compromised via BGP hijacking between August 28-30, 2026, allowing attackers to deliver malicious update packages with valid TLS certificates. The malicious updates installed a root backdoor on affected systems, with official confirmation that only a small number of installations updated during the window were affected. This incident highlights the vulnerability of software update channels to BGP hijacking, a form of supply chain attack that can compromise even products with secure code. It underscores the need for stronger routing security measures like RPKI and multi-layered update verification to protect users from such attacks. Independent forensics revealed that the malicious package wrote root SSH keys, installed a Java payload, and established a persistent service. AlbaHost detected indicators on 5 out of 34 hypervisors, and Softaculous stated there is currently no evidence that other products were affected.
 
-telegram · zaihuapd · Aug 31, 10:21
+telegram · zaihuapd · Sep 1, 06:05
 
-**Background**: Tim Cook has served as Apple's CEO since 2011, succeeding Steve Jobs, and has overseen the company's growth into a $3 trillion market cap giant. John Ternus has been a key figure in Apple's hardware development, overseeing the iPhone, Mac, iPad, and AirPods lines. This transition is part of a planned succession process, with Cook moving to an executive chairman role to provide continuity.
-
-**Tags**: `#Apple`, `#CEO transition`, `#Tim Cook`, `#John Ternus`, `#tech industry`
-
----
-
-<a id="item-6"></a>
-## [Xiaomi Unveils Three Xuanjie Chips, AI Flagship SoC to Debut in Xiaomi 18 Fold](https://t.me/zaihuapd/43524) ⭐️ 8.0/10
-
-Xiaomi announced three new Xuanjie chips at a technical communication meeting in Beijing on August 24, 2026: the AI flagship SoC Xuanjie O3, the high-bandwidth AI accelerator Xuanjie O100, and the 3nm automotive AI chip Xuanjie D100. All three chips have completed tape-out validation and are set to power a full ecosystem of AI computing across human, vehicle, and home scenarios. This marks Xiaomi's significant expansion into self-developed silicon, covering mobile, AI acceleration, and automotive domains, which could reduce reliance on external suppliers and enhance device integration. The debut of the Xuanjie O3 in the Xiaomi 18 Fold signals Xiaomi's ambition to compete at the high end of the smartphone market with differentiated AI capabilities. The Xuanjie O3 features a ten-core all-big-core CPU with a multi-core score exceeding 15,000, and a G2-Ultra NX GPU with 85% performance improvement and 64% power reduction. It is also the world's first mobile processor to support LPDDR6 memory. The Xuanjie O100 uses 6nm wafer-on-wafer advanced packaging to achieve 1.22 TB/s bandwidth, while the Xuanjie D100 integrates 20 CPU cores and 16 NPU cores, supporting up to 160GB unified memory for local deployment of 200B-parameter models.
-
-telegram · zaihuapd · Aug 31, 15:15
-
-**Background**: Xuanjie is Xiaomi's self-developed chip series, aiming to build an AI computing foundation across its ecosystem. LPDDR6 is a low-power memory standard developed by JEDEC, offering higher bandwidth and efficiency compared to LPDDR5X, and is expected to be adopted in next-generation mobile processors. The automotive chip market is growing as carmakers seek to integrate advanced AI capabilities for autonomous driving.
+**Background**: BGP hijacking is a type of attack where malicious actors falsely announce ownership of IP prefixes, rerouting internet traffic to their own infrastructure. This can be exploited to intercept or modify data in transit, as seen in this case where update requests were redirected to a malicious server. Supply chain attacks target less secure elements in the distribution chain, and this incident is a classic example of such an attack on a software update mechanism.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.ithome.com/0/993/813.htm">构筑人车家 AI 算力底座，小米 玄 戒 发布三款自研芯片贯通全场景 - IT之家</a></li>
-<li><a href="https://zhidx.com/p/587490.html">小米连发三个芯片大招！首秀3nm智驾芯片，玄戒O3搭折叠旗舰9月开卖 - 智东西</a></li>
-<li><a href="https://www.163.com/dy/article/L55S5HBO051480KF.html">前瞻全球产业早报：小米发布国内首款3nm智驾高算力AI芯片|英伟达|机器人|hbm|chip|小米集团|知名企业|nvidia_网易订阅</a></li>
+<li><a href="https://en.wikipedia.org/wiki/BGP_hijacking">BGP hijacking - Wikipedia</a></li>
+<li><a href="https://www.cloudflare.com/learning/security/glossary/bgp-hijacking/">What is BGP hijacking? - Cloudflare</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Supply_chain_attack">Supply chain attack</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#Xiaomi`, `#chip`, `#AI`, `#SoC`, `#hardware`
+**Discussion**: Community discussions on platforms like LowEndTalk and Cyber Kendra have expressed concern about the severity of the attack, with some users questioning the effectiveness of Virtualizor's security measures. Others have noted the importance of independent forensics in uncovering the full scope of the compromise.
+
+**Tags**: `#security`, `#BGP hijacking`, `#supply chain attack`, `#rootkit`, `#Virtualizor`
 
 ---

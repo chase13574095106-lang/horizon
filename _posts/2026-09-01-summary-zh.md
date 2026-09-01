@@ -5,142 +5,134 @@ date: 2026-09-01
 lang: zh
 ---
 
-> From 30 items, 6 important content pieces were selected
+> From 36 items, 5 important content pieces were selected
 
 ---
 
-1. [谷歌从 Chrome 网上应用店移除 MV2 扩展，包括 uBlock Origin](#item-1) ⭐️ 8.0/10
-2. [NAT：互联网中心化的原罪](#item-2) ⭐️ 8.0/10
-3. [Claude 共享链接遭搜索引擎索引，用户数据泄露](#item-3) ⭐️ 8.0/10
-4. [OpenClaw 2.0：汇集逾 1.6 万拉取请求的最大更新](#item-4) ⭐️ 8.0/10
-5. [苹果宣布 CEO 交接：库克卸任，特努斯接任](#item-5) ⭐️ 8.0/10
-6. [小米发布三款玄戒芯片，AI 旗舰 SoC 将首搭小米 18 Fold](#item-6) ⭐️ 8.0/10
+1. [Anthropic 发布 Claude Fable 5.1 和 Mythos 5.1](#item-1) ⭐️ 9.0/10
+2. [分析埃德·齐特龙 AI 怀疑论预测的准确性](#item-2) ⭐️ 8.0/10
+3. [1.5 小时训练的小型 Transformer 在 ARC 上超越许多 LLM](#item-3) ⭐️ 8.0/10
+4. [苹果在 OpenAI 诉讼中出示取证证据](#item-4) ⭐️ 8.0/10
+5. [Virtualizor 更新基础设施遭 BGP 劫持，植入 root 后门](#item-5) ⭐️ 8.0/10
 
 ---
 
 <a id="item-1"></a>
-## [谷歌从 Chrome 网上应用店移除 MV2 扩展，包括 uBlock Origin](https://webiterate.dev/google-removed-extensions-ublock-origin-108/) ⭐️ 8.0/10
+## [Anthropic 发布 Claude Fable 5.1 和 Mythos 5.1](https://www.anthropic.com/claude-fable-and-mythos-5-1) ⭐️ 9.0/10
 
-谷歌已从 Chrome 网上应用店移除 Manifest V2（MV2）扩展，包括流行的广告拦截器 uBlock Origin。这标志着 MV2 弃用的最后阶段，Chrome 150 和 151 消除了允许 MV2 扩展继续运行的变通方法。 这影响了数百万依赖 uBlock Origin 进行有效广告拦截的用户，引发了对安全和浏览器垄断的担忧。这也促使用户迁移到 Firefox 等替代浏览器，后者继续支持 MV2 扩展。 Chrome 网上应用店不再接受 MV2 扩展，从 2026 年 6 月 3 日起，Chrome Beta、Dev 和 Canary 渠道会对已安装的 MV2 扩展显示警告。Chrome 150（2026 年 6 月 30 日发布）移除了恢复 MV2 安装的开关，Chrome 151（2026 年 7 月 28 日稳定版）彻底删除了 AllowLegacyMV2Extensions 代码路径。uBlock Origin 在 2026 年 8 月 31 日收到最终更新，但将不再在 Chrome 中工作。
+Anthropic 宣布发布 Claude Fable 5.1 和 Claude Mythos 5.1，这两个模型基于同一底层模型，但具有不同的安全防护措施。新模型在写作质量上有所提升，在科学基准测试中表现更好，并将缓存读取价格从每百万 token 1 美元大幅降至 0.25 美元。 此次发布意义重大，因为新模型提供了更自然的写作风格和更强的科学能力，可能吸引重视这些领域的用户。缓存读取价格的降低使该模型对开发者更具成本效益，可能提高采用率，并影响 LLM 市场的定价趋势。 Claude Fable 5.1 已全面可用，而 Claude Mythos 5.1 仅限通过 Project Glasswing 等可信访问计划使用。两个模型除安全防护外完全相同；Fable 5.1 的分类器会将敏感请求路由到 Claude Opus。价格降低归因于缓存读取价格从每百万 token 1 美元降至 0.25 美元，使得 Fable 5.1 的缓存读取成本仅为 Opus 的一半。
 
-hackernews · twapi · Aug 31, 21:10 · [社区讨论](https://news.ycombinator.com/item?id=49514878)
+hackernews · denysvitali · Sep 1, 17:53 · [社区讨论](https://news.ycombinator.com/item?id=49525378)
 
-**背景**: Manifest V3（MV3）是谷歌推出的新扩展平台，旨在提高安全性、隐私和性能，但通过限制阻塞网络请求的使用来限制广告拦截功能。uBlock Origin 是一款高效的内容拦截器，依赖 MV2 更广泛的 API，其开发者表示 MV3 版本（uBlock Origin Lite）功能较弱。谷歌于 2024 年开始逐步淘汰 MV2，到 2026 年，超过 85%的活跃维护扩展已迁移到 MV3。
+**背景**: Claude Fable 5 和 Claude Mythos 5 是 Anthropic 的 Claude 模型系列的一部分，其中 Mythos 是最强大的系列。Fable 5 是带有安全防护的'Mythos 级'模型，而 Mythos 5 是限制访问、防护较少的版本。5.1 更新带来了写作风格和科学性能的改进，以及价格调整。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://developer.chrome.com/docs/extensions/develop/migrate/mv2-deprecation-timeline">Manifest V2 support timeline | Chrome for Developers</a></li>
-<li><a href="https://blog.google/chromium/manifest-v2-phase-out-begins/">Manifest V2 phase-out begins</a></li>
-<li><a href="https://appuals.com/ublock-origin-not-working-manifest-v2-shutdown/">uBlock Origin Not Working in Chrome? Fixes After ... - Appuals</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Claude_Fable_5">Claude Fable 5</a></li>
+<li><a href="https://platform.claude.com/docs/en/models/fable-5-1/overview">Claude Fable 5.1 - Claude Platform Docs</a></li>
+<li><a href="https://www.anthropic.com/claude-fable-and-mythos-5-1">Introducing Claude Fable 5.1 and Claude Mythos 5.1 \\ Anthropic</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区评论对谷歌的决定表示强烈不满，将广告拦截视为安全问题，尤其是对技术不熟练的用户。许多用户建议改用 Firefox，它继续有效支持 uBlock Origin，并批评谷歌对网络的单边控制。
+**社区讨论**: 社区评论对改进的写作风格给予积极反馈，一位 Anthropic 员工表示它听起来更自然。Simon Willison 分享了模型思考努力程度的示例。一些用户讨论了价格降低，推测这可能反映了 Fable 在原始定价下需求不高，并指出除 Terminal-Bench-Science 外，很难看到其他改进。还有人提到破坏性变更解决了思维链泄露漏洞。
 
-**标签**: `#Chrome`, `#Manifest V2`, `#ad-blocking`, `#uBlock Origin`, `#browser`
+**标签**: `#AI`, `#Anthropic`, `#Claude`, `#LLM`, `#Machine Learning`
 
 ---
 
 <a id="item-2"></a>
-## [NAT：互联网中心化的原罪](https://dreamstation.systems/personal/ntppost.html) ⭐️ 8.0/10
+## [分析埃德·齐特龙 AI 怀疑论预测的准确性](https://danluu.com/zitron/) ⭐️ 8.0/10
 
-一篇评论文章认为网络地址转换（NAT）是互联网中心化的根本原因，引发了讨论，其中 Linux NAT 的原始实现者 Rusty Russell 承认自己在削弱公共端点方面所起的作用。 这场辩论凸显了为应对 IPv4 地址稀缺而采取的技术变通方案如何塑造了现代互联网的客户端-服务器模式和中心化，影响了所有运行服务器或重视去中心化网络的人。 Rusty Russell 解释说，他的实现避免了端口预留，以便将更多连接挤入一个 IP 地址，这使得来自不同地址的传入流量无法路由。讨论还将常规 NAT 与更严格的运营商级 NAT（CGNAT）进行了对比。
+Dan Luu 发布了一篇详细分析，评估埃德·齐特龙对 AI 怀疑论预测的准确性，并将其与实际结果进行比较。该文章审视了齐特龙关于 AI 炒作和财务报告的言论，对其过往记录进行了细致考察。 这一分析意义重大，因为它涉及 AI 炒作与现实之间持续争论的话题，影响投资者、技术专家和政策制定者。通过审视一位著名怀疑论者的预测，它鼓励围绕 AI 发展轨迹和财务可持续性进行更基于证据的讨论。 该文章指出，齐特龙的预测准确性参差不齐，有些过于悲观。它还强调，齐特龙的风格常常夸大其词，这可能削弱他的可信度，这与 AI 支持者的夸大言论类似。
 
-hackernews · robinpie · Aug 31, 02:23 · [社区讨论](https://news.ycombinator.com/item?id=49504905)
+hackernews · jatins · Sep 1, 18:35 · [社区讨论](https://news.ycombinator.com/item?id=49526069)
 
-**背景**: NAT 在 RFC 1631（1994 年）中作为 IPv4 地址枯竭和路由可扩展性的短期解决方案被引入。它将多个私有 IP 地址映射到一个公共 IP，节省了地址空间，但破坏了端到端原则，该原则原本允许任何主机充当服务器。这促进了集中式服务和客户端-服务器模式的兴起。
+**背景**: 埃德·齐特龙是一位科技评论家和播客主持人，以对 AI 公司和生成式 AI 热潮持怀疑态度而闻名。他的预测通常关注财务不可持续性和过度炒作的说法。Dan Luu 是一位软件工程师和博主，经常用数据驱动的见解分析科技行业趋势。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Network_address_translation">Network address translation - Wikipedia</a></li>
-<li><a href="https://www.cisco.com/site/us/en/learn/topics/networking/what-is-network-address-translation-nat.html">What Is Network Address Translation (NAT)? - Cisco</a></li>
-<li><a href="https://www.ietf.org/archive/id/draft-nottingham-avoiding-internet-centralization-05.html">Centralization , Decentralization, and Internet Standards</a></li>
+<li><a href="https://danluu.com/zitron/">How accurate have Ed Zitron 's AI skeptic predictions been?</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Ed_Zitron">Ed Zitron - Wikipedia</a></li>
+<li><a href="https://www.vanityfair.com/story/ed-zitron-ai-skeptic-openai">Ed Zitron Is Sounding the Alarm About the AI Bubble. | Vanity Fair</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 评论者意见不一：一些人同意 NAT 是中心化的重要因素，而另一些人则认为这是夸大其词，指出常规 NAT 是可管理的，并且保护了不安全的设备。Rusty Russell 的承认增强了批评的分量，但一些人指出，糟糕的用户体验和 CGNAT 才是真正的问题。
+**社区讨论**: 评论者提出了不同观点：有人建议将齐特龙的预测与奥特曼、阿莫迪等 AI 领导者的预测进行比较，而另一些人则认为齐特龙已成为他所批评的支持者的镜像。还有人指出，财务报告的复杂性，例如超大规模企业将估值增长记为“其他收入”，在此类分析中常被忽视。
 
-**标签**: `#NAT`, `#internet architecture`, `#centralization`, `#networking`, `#history`
+**标签**: `#AI`, `#skepticism`, `#predictions`, `#tech industry`, `#analysis`
 
 ---
 
 <a id="item-3"></a>
-## [Claude 共享链接遭搜索引擎索引，用户数据泄露](https://t.me/zaihuapd/43511) ⭐️ 8.0/10
+## [1.5 小时训练的小型 Transformer 在 ARC 上超越许多 LLM](https://mvakde.github.io/blog/44-on-arc-1/) ⭐️ 8.0/10
 
-Anthropic 的 Claude 共享对话链接因缺少 noindex 标签而被 Google 和 Bing 等搜索引擎索引，导致敏感用户数据泄露。这一情况在 2026 年 7 月底得到了 WIRED 等媒体的确认。 这一隐私漏洞影响了数千名用户，泄露了 API 密钥、加密货币钱包、个人信息和企业机密。它凸显了 AI 聊天功能中适当隐私控制的重要性，并可能损害用户对 Anthropic 平台的信任。 共享链接缺少搜索引擎认可的'noindex'元标签，而 Anthropic 的 robots.txt 禁止规则无法移除已索引的页面。受影响的数据包括法律咨询、医疗信息和社会安全号码，Anthropic 尚未修复此问题。
+一个从头开始训练仅 1.5 小时的小型自回归 Transformer，在 ARC 基准上取得了有竞争力的结果，超越了众多大型语言模型。作者强调，这一成果并非使用 LLM 实现，凸显了样本高效的非 LLM 方法的潜力。 该模型是一个小型自回归 Transformer，而非 LLM，从头开始训练。关键改进包括现代架构选择（SwiGLU、RMSNorm）、数据多样性以及扩展到 8 层。作者还澄清，在评估谜题上训练并非“在测试集上训练”，因为未使用标签，且 ARC 是一个元学习基准。
 
-telegram · zaihuapd · Aug 31, 03:22
+hackernews · porridgeraisin · Sep 1, 09:52 · [社区讨论](https://news.ycombinator.com/item?id=49519939)
 
-**背景**: Claude 的共享对话功能允许用户为其聊天生成公开链接。如果没有 noindex 标签，这些链接可能被搜索引擎抓取和索引，从而被公开发现。大约一年前，ChatGPT 也出现过类似问题，但很快得到了修复。
+**背景**: ARC（抽象与推理语料库）是一个旨在衡量流体智能的基准，包含对人类容易但对 AI 困难的谜题。它常用于评估超越标准语言任务的推理能力。样本效率是指模型从有限数据中有效学习的能力，这是深度学习中的一个关键挑战，因为模型通常需要大量数据。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.wired.com/story/private-claude-chats-exposed-in-google-and-bing-search-results/">Private Claude Chats Exposed in Google and Bing Search Results | WIRED</a></li>
-<li><a href="https://www.searchenginejournal.com/indexed-claude-chats-show-why-disallow-is-not-noindex/583852/">Indexed Claude Chats Show Why Disallow Is Not Noindex</a></li>
-<li><a href="https://www.cnet.com/tech/services-and-software/private-claude-conversations-have-been-indexed-by-search-engines/">Private Claude Conversations Have Been Indexed by Search Engines - CNET</a></li>
+<li><a href="https://arcprize.org/">ARC Prize</a></li>
+<li><a href="https://arcprize.org/arc-agi/3">Arc-agi-3</a></li>
+<li><a href="https://benchlm.ai/benchmarks/arc-agi-2">ARC-AGI-2 Leaderboard (September 2026): GPT-5.6 Sol Leads ... - benchlm.ai</a></li>
 
 </ul>
 </details>
 
-**标签**: `#privacy`, `#security`, `#Claude`, `#Anthropic`, `#data leak`
+**社区讨论**: 社区讨论总体积极，作者积极参与并澄清误解。一些评论者称赞这一成就，而另一些则对方法论提出担忧，如“挤柠檬”（渐进式改进）和可能对基准过拟合。此外，也有评论者对作者自救的个人经历表示赞赏。
+
+**标签**: `#transformers`, `#ARC`, `#sample efficiency`, `#benchmark`, `#deep learning`
 
 ---
 
 <a id="item-4"></a>
-## [OpenClaw 2.0：汇集逾 1.6 万拉取请求的最大更新](https://openclaw.ai/blog/openclaw-2-accidentally) ⭐️ 8.0/10
+## [苹果在 OpenAI 诉讼中出示取证证据](https://9to5mac.com/2026/08/31/apple-openai-forensic-macbook-evidence/) ⭐️ 8.0/10
 
-OpenClaw 于 8 月 30 日发布了史上最大更新 2.0 版本，汇集了来自 933 名贡献者（包括 569 名首次参与者）的逾 1.6 万个拉取请求。此次更新覆盖了平台的各个方面，从安装、消息到记忆、技能、模型、浏览器、插件和安全。 此次发布标志着 OpenClaw 这一广泛使用的开源项目的重要里程碑，展现了强大的社区参与度和快速的发展步伐。全面的改进，包括如私有凭据请求等增强的安全功能，可能吸引更多用户，并巩固其在 AI 代理生态系统中的地位。 此次更新包括简化的安装流程、重建的浏览器体验，以及支持多人协作的新共享云端会话。值得注意的是，它引入了私有凭据请求功能，允许用户安全地与代理共享凭据，而不会在聊天中暴露。
+苹果在针对 OpenAI 的诉讼中出示了取证证据，指控前员工刘先生将在苹果窃取的商业机密（包括一份机密电路原理图）用于其在 OpenAI 的 AI 工作中。证据包括他在 LTspice 模拟中使用该原理图，以及在得知苹果调查后试图销毁证据的行为。 该案提出了新的法律问题，即向 AI 模型输入商业机密是否构成不可逆转的盗用，可能为法律如何处理 AI 训练数据和专有信息开创先例。它还凸显了 AI 开发与知识产权保护之间日益紧张的矛盾，影响科技公司、法律从业者和 AI 研究人员。 苹果认为，当商业机密信息被输入到从中学习的 AI 代理或模型中时，这种学习可能会产生不可逆转且持续传播的商业机密使用。苹果还要求访问刘先生使用过的一台 Mac mini，该设备通过 iCloud 同步到了他从苹果带走的 MacBook 上，这引发了关于公司设备上个人数据的隐私担忧。
 
-telegram · zaihuapd · Aug 31, 04:38
+hackernews · colinprince · Sep 1, 20:19 · [社区讨论](https://news.ycombinator.com/item?id=49527573)
 
-**背景**: OpenClaw 是一个开源 AI 代理平台，在去年年底发布时迅速走红。拉取请求（PR）是 GitHub 中的关键协作功能，允许开发者对代码库提出更改，由维护者审查后合并。此次更新的规模，超过 1.6 万个 PR，凸显了该项目活跃的贡献者基础和开源开发的协作性质。
+**背景**: 商业秘密诉讼通常依赖数字取证来发现盗用证据，因为电子数据会留下可分析的痕迹。在此案中，苹果的取证证据包括云同步数据和模拟文件，展示了数字轨迹如何将员工的行为与专有信息联系起来。关于 AI 和商业秘密的法律框架仍在演变中，法院正在努力将传统的知识产权法律应用于 AI 训练和使用。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://mashable.com/tech/openclaw-2-0-released-agentic-ai">OpenClaw 2 . 0 : How to try the updated AI agent, what's new | Mashable</a></li>
-<li><a href="https://docs.openclaw.ai/releases/2026.8.1">v2026.8.1 (AKA OpenClaw 2 . 0 ) - OpenClaw</a></li>
-<li><a href="https://docs.github.com/articles/about-pull-requests?/">Pull requests - GitHub Docs</a></li>
+<li><a href="https://www.alvarezandmarsal.com/thought-leadership/digital-forensics-in-trade-secret-litigation-the-dual-protection-of-technology-and-law">Digital Forensics in Trade Secret Litigation: The Dual Protection of Technology and Law | Alvarez & Marsal | Management Consulting | Professional Services</a></li>
+<li><a href="https://www.thesedonaconference.org/Forensic_Webinar">Webinar on Forensic Issues in Trade Secret Disputes (Public Comment Version) | The Sedona Conference®</a></li>
+<li><a href="https://reelmind.ai/blog/openai-says-deepseek-may-have-improperly-harvested-its-data-ai-ethics-and-data-privacy">OpenAI Says DeepSeek May Have Improperly Harvested Its Data : AI</a></li>
 
 </ul>
 </details>
 
-**标签**: `#OpenClaw`, `#software release`, `#open source`, `#developer tools`, `#collaboration`
+**社区讨论**: 社区评论对法律论点表示好奇，特别是苹果关于通过 AI 学习不可逆转传播商业秘密的主张。一些评论者强调隐私影响，指出公司设备上的个人数据可能受到合法搜查。其他人则将其与历史上的商业秘密案件（如可口可乐配方事件）相提并论，认为此案可能成为里程碑。
+
+**标签**: `#legal`, `#AI`, `#trade secrets`, `#privacy`, `#Apple`
 
 ---
 
 <a id="item-5"></a>
-## [苹果宣布 CEO 交接：库克卸任，特努斯接任](https://t.me/zaihuapd/43516) ⭐️ 8.0/10
+## [Virtualizor 更新基础设施遭 BGP 劫持，植入 root 后门](https://www.virtualizor.com/blog/security-incident-bgp-hijacking/) ⭐️ 8.0/10
 
-苹果宣布管理层交接：现任 CEO 蒂姆·库克将出任董事会执行董事长，硬件工程高级副总裁约翰·特努斯将于 2026 年 9 月 1 日起担任新任 CEO。董事会已一致批准该安排。 这是苹果十多年来首次更换 CEO，标志着这家全球最具价值公司进入新时代。特努斯的晋升反映了苹果对硬件创新的持续重视，此次交接将影响产品战略、投资者信心以及整个科技行业。 蒂姆·库克将在整个夏天继续担任 CEO 以确保平稳过渡，现任董事长 Arthur Levinson 将于 9 月 1 日转任首席独立董事。约翰·特努斯于 2001 年加入苹果，2013 年起领导硬件工程，他也将于同日加入董事会。
+2026 年 8 月 28 日至 30 日，Virtualizor 的更新基础设施遭到 BGP 劫持，攻击者利用有效 TLS 证书投递了恶意更新包。恶意更新在受影响系统上安装了 root 后门，官方确认仅少量在窗口期更新的安装受到影响。 该事件凸显了软件更新渠道易受 BGP 劫持攻击的脆弱性，这是一种供应链攻击形式，即使代码本身安全的产品也可能被攻破。它强调了采取更强路由安全措施（如 RPKI）和多层更新验证的必要性，以保护用户免受此类攻击。 独立取证显示，恶意包会写入 root SSH 密钥、安装 Java 载荷并建立持久化服务。AlbaHost 在 34 台 hypervisor 中发现 5 台存在指标，Softaculous 表示目前无证据表明其他产品受影响。
 
-telegram · zaihuapd · Aug 31, 10:21
+telegram · zaihuapd · Sep 1, 06:05
 
-**背景**: 蒂姆·库克自 2011 年起担任苹果 CEO，接替史蒂夫·乔布斯，并带领公司成长为市值 3 万亿美元的巨头。约翰·特努斯是苹果硬件开发的关键人物，负责 iPhone、Mac、iPad 和 AirPods 等产品线。此次交接是计划中的继任流程的一部分，库克转任执行董事长以提供连续性。
-
-**标签**: `#Apple`, `#CEO transition`, `#Tim Cook`, `#John Ternus`, `#tech industry`
-
----
-
-<a id="item-6"></a>
-## [小米发布三款玄戒芯片，AI 旗舰 SoC 将首搭小米 18 Fold](https://t.me/zaihuapd/43524) ⭐️ 8.0/10
-
-小米于 2026 年 8 月 24 日在北京的玄戒芯片技术沟通会上发布了三款新芯片：AI 旗舰 SoC 玄戒 O3、高带宽 AI 加速芯片玄戒 O100，以及 3nm 智驾 AI 芯片玄戒 D100。三款芯片均已完成回片验证，将贯穿人车家全生态的端侧 AI 算力需求。 这标志着小米在自研芯片领域的重大扩展，覆盖移动、AI 加速和汽车领域，可能减少对外部供应商的依赖并增强设备集成度。玄戒 O3 首搭小米 18 Fold，表明小米意在高端智能手机市场以差异化 AI 能力竞争。 玄戒 O3 采用十核全大核 CPU，多核跑分突破 15000 分，GPU 为 G2-Ultra NX，性能提升 85%、功耗降低 64%。它还是全球首款支持 LPDDR6 内存的移动处理器。玄戒 O100 采用 6nm 晶圆级垂直堆叠先进封装，带宽高达 1.22 TB/s；玄戒 D100 集成 20 核 CPU 和 16 核 NPU，最高支持 160GB 统一内存，可本地部署 200B 参数大模型。
-
-telegram · zaihuapd · Aug 31, 15:15
-
-**背景**: 玄戒是小米自研芯片系列，旨在构建覆盖其生态的 AI 算力底座。LPDDR6 是 JEDEC 制定的低功耗内存标准，相比 LPDDR5X 提供更高带宽和效率，预计将在下一代移动处理器中采用。随着汽车制造商寻求集成先进 AI 能力用于自动驾驶，车载芯片市场正在增长。
+**背景**: BGP 劫持是一种攻击方式，攻击者虚假声明对 IP 前缀的所有权，将互联网流量重定向到自己的基础设施。这可以被利用来拦截或修改传输中的数据，正如本次事件中更新请求被重定向到恶意服务器。供应链攻击针对分发链中较不安全的环节，本次事件就是针对软件更新机制的这种攻击的典型例子。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.ithome.com/0/993/813.htm">构筑人车家 AI 算力底座，小米 玄 戒 发布三款自研芯片贯通全场景 - IT之家</a></li>
-<li><a href="https://zhidx.com/p/587490.html">小米连发三个芯片大招！首秀3nm智驾芯片，玄戒O3搭折叠旗舰9月开卖 - 智东西</a></li>
-<li><a href="https://www.163.com/dy/article/L55S5HBO051480KF.html">前瞻全球产业早报：小米发布国内首款3nm智驾高算力AI芯片|英伟达|机器人|hbm|chip|小米集团|知名企业|nvidia_网易订阅</a></li>
+<li><a href="https://en.wikipedia.org/wiki/BGP_hijacking">BGP hijacking - Wikipedia</a></li>
+<li><a href="https://www.cloudflare.com/learning/security/glossary/bgp-hijacking/">What is BGP hijacking? - Cloudflare</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Supply_chain_attack">Supply chain attack</a></li>
 
 </ul>
 </details>
 
-**标签**: `#Xiaomi`, `#chip`, `#AI`, `#SoC`, `#hardware`
+**社区讨论**: LowEndTalk 和 Cyber Kendra 等平台上的社区讨论对此次攻击的严重性表示担忧，一些用户质疑 Virtualizor 安全措施的有效性。其他人则指出独立取证在揭示攻击全貌中的重要性。
+
+**标签**: `#security`, `#BGP hijacking`, `#supply chain attack`, `#rootkit`, `#Virtualizor`
 
 ---
