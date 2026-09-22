@@ -5,204 +5,315 @@ date: 2026-09-22
 lang: en
 ---
 
-> From 30 items, 9 important content pieces were selected
+> From 36 items, 13 important content pieces were selected
 
 ---
 
-1. [Xiaomi MiMo v2.6](#item-1) ⭐️ 8.0/10
-2. [NASA's Mars Sample Return mission is effectively cancelled](#item-2) ⭐️ 8.0/10
-3. [Blogger Argues Against AI-Generated Technical Writing](#item-3) ⭐️ 8.0/10
-4. [Bryan Cantrill on What Sun Microsystems Got Wrong](#item-4) ⭐️ 8.0/10
-5. [Fiber Cut Halts Flights at Busy East Coast Airports](#item-5) ⭐️ 8.0/10
-6. [TypeSafe AI launches Jev, a 'System One' decision model returning typed probabilities](#item-6) ⭐️ 8.0/10
-7. [Cloudflare Python Workers reach general availability after two-year preview](#item-7) ⭐️ 8.0/10
-8. [Moonshot AI Seeks Up to 30% Revenue Share from Microsoft, Amazon, Google for Kimi K3](#item-8) ⭐️ 8.0/10
-9. [Apple unveils 2nm M6 chip and quad-die M5 Ultra](#item-9) ⭐️ 8.0/10
+1. [OpenAI Releases GPT-6 Sol and Luna with Major Price Cuts](#item-1) ⭐️ 9.0/10
+2. [Anthropic Releases Claude Opus 5.5 With Major Price Cuts](#item-2) ⭐️ 9.0/10
+3. [Pentagon Blames AI Overreliance for Deadly Strike on Iranian School](#item-3) ⭐️ 9.0/10
+4. [OpenAI Begins Limited Preview of GPT-5.6 Series: Sol, Terra, Luna](#item-4) ⭐️ 9.0/10
+5. [vLLM v0.30.0 ships Fast Start GPU weight-cache daemon and many new models](#item-5) ⭐️ 8.0/10
+6. [ShinyHunters Claims Breach of FBI Employee Data](#item-6) ⭐️ 8.0/10
+7. [25 Fields Medalists Warn AI May Be Misaligned with Math Research Goals](#item-7) ⭐️ 8.0/10
+8. [Alibaba unveils Zhenwu V900, claims strongest domestic AI chip with 3x compute](#item-8) ⭐️ 8.0/10
+9. [Cloudflare Python Workers Reach General Availability](#item-9) ⭐️ 8.0/10
+10. [DeepSeek and Tsinghua Release DSec Sandbox Platform Technical Report](#item-10) ⭐️ 8.0/10
+11. [US Proposes AI Incident Notification Channel with China](#item-11) ⭐️ 8.0/10
+12. [China Probes DeepSeek and Moonshot Over Data Leaks to Anthropic's Claude](#item-12) ⭐️ 8.0/10
+13. [DeepSeek to Brief UN Security Council on AI Risks](#item-13) ⭐️ 8.0/10
 
 ---
 
 <a id="item-1"></a>
-## [Xiaomi MiMo v2.6](https://mimo.xiaomi.com/mimo-v2-6) ⭐️ 8.0/10
+## [OpenAI Releases GPT-6 Sol and Luna with Major Price Cuts](https://openai.com/index/introducing-gpt-6-sol-and-luna/) ⭐️ 9.0/10
 
-Xiaomi releases MiMo v2.6, a family of open-weight large language models with transparent training methodology, sparking discussion on open-source AI and global competition.
+OpenAI announced GPT-6 Sol and GPT-6 Luna, a new generation of models that bring frontier intelligence to everyday work with different balances of capability and cost. Both models are priced at roughly half of what OpenAI charged for GPT-5.6 Sol and GPT-5.6 Luna under their promotional pricing, and they use fewer tokens to run than their predecessors. The steep price cuts could significantly lower the cost of running AI agents and enterprise workloads, intensifying competition with rivals like Anthropic's Claude Code. Developers and businesses choosing between model providers will need to reassess the trade-offs between capability, usage limits, and cost. OpenAI says GPT-6 Sol makes half as many mistakes as GPT-5.6, while GPT-6 Luna matches previous higher-tier performance at far lower cost. The GPT-6 family also changes prompt caching, with higher default cache hit rates and a 90% discount on cached input reads, and allows changing reasoning effort or available tools mid-conversation without losing the cache.
 
-hackernews · volf_ · Sep 21, 20:12 · [Discussion](https://news.ycombinator.com/item?id=49792730)
+hackernews · OfficialTurkey · Sep 22, 18:00 · [Discussion](https://news.ycombinator.com/item?id=49805509)
 
-**Tags**: `#LLM`, `#open-weights`, `#Xiaomi`, `#AI-research`, `#model-release`
+**Background**: OpenAI has been iterating rapidly on its GPT model lineup, with GPT-5.6 serving as the previous generation for both its higher-tier Sol and lower-tier Luna variants. Prompt caching is a technique that stores parts of a prompt so repeated requests cost less and run faster, making it important for agentic and high-volume workloads. The new release arrives amid intense competition among AI coding assistants such as OpenAI's Codex and Anthropic's Claude Code.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://openai.com/index/introducing-gpt-6-sol-and-luna/">Introducing GPT - 6 Sol and Luna | OpenAI</a></li>
+<li><a href="https://venturebeat.com/technology/openai-releases-gpt-6-sol-and-luna-models-slashing-api-costs-50-or-more">VentureBeatOpenAI releases GPT-6 Sol and Luna models, slashing API ...</a></li>
+<li><a href="https://www.zdnet.com/innovation/openai-gpt-6-sol-luna-release/">OpenAI's GPT - 6 Sol doubles its accuracy rate - for half the cost - ZDNET</a></li>
+
+</ul>
+</details>
+
+**Discussion**: Hacker News commenters focused heavily on the pricing, with simonw calling GPT-6 Luna being half the price of GPT-5.6 Luna 'a really big deal.' Others debated usage limits between Codex and Claude Code, and m_fayer expressed attachment to GPT-5.6 Sol, worrying that a technically better successor might not feel as natural to work with.
+
+**Tags**: `#OpenAI`, `#GPT-6`, `#AI models`, `#pricing`, `#Hacker News`
 
 ---
 
 <a id="item-2"></a>
-## [NASA's Mars Sample Return mission is effectively cancelled](https://www.science.org/content/article/nasa-s-mars-sample-return-mission-dead) ⭐️ 8.0/10
+## [Anthropic Releases Claude Opus 5.5 With Major Price Cuts](https://www.anthropic.com/claude-opus-5-5) ⭐️ 9.0/10
 
-NASA's Mars Sample Return (MSR) mission, a joint Flagship-class effort with the European Space Agency, has been effectively cancelled in 2026 after cost estimates ballooned to roughly $11 billion and the sample return date slipped to around 2040. The cancellation comes amid scrutiny of JPL's management and NASA's decision to open JPL's management contract to competition. The cancellation of a major NASA flagship planetary science mission signals a shift in how the agency weighs ambitious sample-return science against cost and schedule, and it leaves China's Tianwen-3 mission, planned for the 2028 launch window, as the leading contender to bring the first Martian samples to Earth. It also raises questions about JPL's future role and whether commercial heavy-lift vehicles like Starship could enable cheaper alternatives. The NASA-ESA MSR campaign was approved in 2022 and involved three elements: the Perseverance rover collecting samples, a sample retrieval lander with an ascent vehicle, and an Earth return orbiter, with samples originally targeted for return around 2033. The mission would have returned only about 1.1 pounds (500 grams) of Martian material, compared with the 842 pounds of lunar samples brought back by the Apollo missions.
+Anthropic released Claude Opus 5.5, its first model since publicly calling for 'pacing the frontier,' featuring improved communication abilities and across-the-board price cuts: cache reads dropped from $0.50 to $0.20 per million tokens, input from $5 to $4, output from $25 to $20, and cache writes from $6.25 to $5. The model was tested before release by external evaluators including Frontier Design and METR, and is served by five providers on OpenRouter. The price cuts directly challenge cheaper competitors like DeepSeek, which some users say they now prefer for cost-sensitive agentic coding tasks, while the release undercuts Anthropic's own stated safety stance on slowing frontier development. As one of the highest-spend models on OpenRouter, Opus's pricing shift could reshape provider economics across the LLM API market. Anthropic emphasizes that Opus 5.5 'communicates more naturally than prior models,' putting key information up front and making long work sessions easier to follow, which the company frames as both a usability and safety benefit. The model is available through Amazon Bedrock, Azure, Google Vertex, Claude Platform on AWS, and Anthropic itself, with automatic failover and provider pinning on OpenRouter.
 
-hackernews · Muhammad523 · Sep 21, 19:14 · [Discussion](https://news.ycombinator.com/item?id=49791939)
+hackernews · km144 · Sep 22, 16:29 · [Discussion](https://news.ycombinator.com/item?id=49803892)
 
-**Background**: Mars Sample Return is a proposed multi-mission campaign to collect rock and dust samples on Mars and bring them to Earth, where they could be analyzed far more extensively than by onboard instruments, particularly to determine whether Mars once hosted life. NASA's Perseverance rover has been caching samples since 2021, but returning them requires a lander, a Mars ascent vehicle, and an Earth return orbiter. Concerns about possible back contamination of Earth's biosphere from Martian samples have been raised, though the risk is considered low.
+**Background**: Anthropic's Claude family ships in three tiers—Haiku, Sonnet, and Opus—with Opus as the most capable. 'Frontier models' are the most advanced AI systems available at a given moment, trained on massive datasets at costs that can reach hundreds of millions of dollars, and they typically power advanced reasoning and agentic workflows. Anthropic has positioned itself as a safety-focused lab, and its recent call to 'pace the frontier' referred to slowing the race toward ever-more-capable models.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Mars_sample-return_mission">Mars sample - return mission - Wikipedia</a></li>
-<li><a href="https://en.wikipedia.org/wiki/NASA-ESA_Mars_Sample_Return">NASA-ESA Mars Sample Return - Wikipedia</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Jet_Propulsion_Laboratory">Jet Propulsion Laboratory - Wikipedia</a></li>
+<li><a href="https://www.anthropic.com/claude-opus-5-5">Introducing Claude Opus 5 . 5 \ Anthropic</a></li>
+<li><a href="https://openrouter.ai/anthropic/claude-opus-5.5">Claude Opus 5 . 5 - API Pricing & Providers | OpenRouter</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Frontier_model">Frontier model</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commenters highlighted China's parallel Tianwen-3 sample return effort, with one noting it will launch in 2028, and criticized JPL leadership for letting costs reach $11 billion and designing around legacy rockets like Ariane 64 instead of cheaper commercial options such as Starship or New Glenn. Others argued it may be wiser to wait for crewed missions or invest in reusable launch capability rather than spend roughly $20 billion on a largely expendable mission to deliver a few rocks, while one commenter questioned why a January 2026 article was being surfaced now.
+**Discussion**: Commenters widely celebrated the price drop, with one noting Opus 5 was likely the highest-spend model on OpenRouter, while others criticized the apparent contradiction between Anthropic's 'pacing the frontier' rhetoric and its continued rapid releases. Some users said they now prefer DeepSeek v4.1 for cheap, hardworking agentic coding, and one shared pelican benchmark images across thinking levels.
 
-**Tags**: `#space exploration`, `#NASA`, `#Mars Sample Return`, `#JPL`, `#space policy`
+**Tags**: `#AI/ML`, `#LLM`, `#Anthropic`, `#Model Release`, `#AI Safety`
 
 ---
 
 <a id="item-3"></a>
-## [Blogger Argues Against AI-Generated Technical Writing](https://blog.colinbreck.com/i-dont-want-to-read-what-you-didnt-write/) ⭐️ 8.0/10
+## [Pentagon Blames AI Overreliance for Deadly Strike on Iranian School](https://www.bloomberg.com/graphics/2026-iran-school-attack/) ⭐️ 9.0/10
 
-Colin Breck published a blog post titled 'I don't want to read what you didn't write,' arguing that using AI to generate technical documents and summaries undermines effective knowledge transfer. The post sparked a Hacker News discussion with commenters adding nuanced perspectives on the issue. As AI writing tools become ubiquitous, this debate highlights a growing tension in software engineering: whether AI-generated documentation helps or hinders communication and code review. The discussion affects developers, technical writers, and teams adopting AI tools, and touches on broader questions of authenticity and efficiency in knowledge work. Commenters used information theory to argue that AI cannot replace genuine writing because it cannot know the semantic information the author intends to transfer. Others complained about overly verbose AI-generated pull request descriptions, and some pointed out irony in the article's own phrasing.
+A Pentagon report concluded that the U.S. "failed in its obligation to do everything feasible to verify" that an Iranian school in Minab was a military objective, and that the failure "went beyond mere negligence." The report attributed the deadly missile strike partly to overreliance on AI-assisted targeting tools, including Palantir's Maven Smart System, which recommended the school based on outdated intelligence data. This is one of the first confirmed cases where AI-assisted military targeting contributed to mass civilian casualties, intensifying global debate over accountability, human oversight, and the limits of AI in lethal decision-making. It could accelerate calls for binding international norms on military AI and reshape how defense agencies deploy and audit such systems. The Minab site had been cataloged as an Islamic Revolutionary Guard Corps facility due to outdated data and was fed into Maven alongside other candidates, emerging as a recommendation; officials said some users expected Maven to flag stale records or contradictions, though it is unclear why they held that expectation. The report's finding that the failure "went beyond mere negligence" and that the U.S. acted "recklessly" raises the legal stakes considerably.
 
-hackernews · mooreds · Sep 21, 22:30 · [Discussion](https://news.ycombinator.com/item?id=49794330)
+hackernews · devonnull · Sep 22, 19:03 · [Discussion](https://news.ycombinator.com/item?id=49806430)
 
-**Background**: Technical writing and documentation are crucial for knowledge transfer in software engineering, especially in code reviews and design documents. With the rise of large language models (LLMs) like GPT-4, many developers now use AI to generate or summarize documentation, leading to debates about quality, authenticity, and effectiveness.
+**Background**: The Maven Smart System is the product of a decade-long collaboration between the U.S. Department of Defense and the tech industry to enhance intelligence analysis, surveillance, and targeting; it is designed to support human operators, not replace them. AI decision-support systems in targeting can propose military objectives and give actionable recommendations, and research has long warned of "automation bias" — the human tendency to over-trust AI outputs, especially under high-pressure conditions. International humanitarian law requires that parties to a conflict do everything feasible to verify that a target is a legitimate military objective, and human responsibility for decisions on the use of weapons must be retained since accountability cannot be transferred to machines.
 
-**Discussion**: The Hacker News discussion was highly insightful: one commenter used information theory to explain why AI cannot replace genuine writing, another described the practical problem of overly verbose AI-generated pull request descriptions, and a third pointed out irony in the article itself. Overall sentiment supported the article's direction but with nuanced critiques.
+<details><summary>References</summary>
+<ul>
+<li><a href="https://www.brennancenter.org/our-work/research-reports/militarys-use-ai-explained">The Military’s Use of AI, Explained | Brennan Center for Justice</a></li>
+<li><a href="https://blogs.icrc.org/law-and-policy/2024/08/29/artificial-intelligence-in-military-decision-making-supporting-humans-not-replacing-them/">AI in military decision-making: supporting humans, not replacing them</a></li>
+<li><a href="https://www.hrw.org/report/2015/04/09/mind-gap/lack-accountability-killer-robots">Mind the Gap: The Lack of Accountability for Killer Robots | HRW</a></li>
 
-**Tags**: `#AI-generated content`, `#technical writing`, `#software engineering`, `#communication`, `#Hacker News`
+</ul>
+</details>
+
+**Discussion**: Commenters broadly agreed that AI itself is not the root culprit, with one noting the details suggest the failure was human and procedural rather than algorithmic. Several argued strongly that shifting decision-making authority to AI does not absolve humans of responsibility, since "an AI can't be tried in a court," and criticized both the Pentagon and Palantir for deflecting blame rather than accepting accountability. Others pointed to a deeper problem: officials who don't understand AI's blind spots embraced it as an "ultimate analyst," expecting capabilities the system never had.
+
+**Tags**: `#AI ethics`, `#military AI`, `#accountability`, `#AI limitations`, `#defense technology`
 
 ---
 
 <a id="item-4"></a>
-## [Bryan Cantrill on What Sun Microsystems Got Wrong](https://bcantrill.dtrace.org/2026/09/20/what-sun-got-wrong/) ⭐️ 8.0/10
+## [OpenAI Begins Limited Preview of GPT-5.6 Series: Sol, Terra, Luna](https://t.me/zaihuapd/43990) ⭐️ 9.0/10
 
-Bryan Cantrill, a former Sun Microsystems engineer and co-creator of DTrace, published a retrospective essay titled "What Sun got wrong" on his personal blog on September 20, 2026, analyzing the strategic and technical missteps that led to Sun's decline. The post sparked a large Hacker News discussion with 271 comments, in which former customers and employees shared firsthand anecdotes about Sun's sales culture, product decisions, and eventual acquisition by Oracle. Sun's collapse remains one of the most instructive case studies in the technology industry, showing how a company that produced foundational innovations like Java, Solaris, SPARC, and NFS could still be undone by strategic misjudgments. Cantrill's perspective carries unusual weight because he lived through the decline from inside Sun's engineering ranks, and the community response shows the topic still resonates with engineers and investors thinking about today's dominant platform companies. Commenters highlighted specific decisions they believe sealed Sun's fate, including the brief cancellation of Solaris on x86 in 2002, which alienated customers wary of being locked into SPARC hardware, and a failed 2002 deal with Google reportedly derailed by Sun's insistence on knowing how many servers Google operated. Others contrasted Sun's laborious, quote-driven sales process with Dell's next-day commodity servers, and noted that Sun's stock fell from roughly $70 at the dot-com peak to about $7 shortly after.
+OpenAI has started a limited preview of its GPT-5.6 series, introducing three tiers: Sol (flagship), Terra (balanced), and Luna (low-cost). Sol emphasizes stronger coding, biosecurity, and cybersecurity capabilities, and adds a new 'max' reasoning intensity plus an 'ultra' mode, while Terra offers performance close to GPT-5.5 at 2x lower cost and Luna targets the lowest-cost segment. This is a major model release that reshapes OpenAI's product lineup across capability and price tiers, potentially pressuring competitors and changing cost-performance expectations for developers and enterprises. The tiered structure also signals OpenAI's strategy of segmenting the market by task complexity and budget. The preview is initially limited to a small number of trusted partners via the API and Codex, and OpenAI describes it as a short-term step taken at the request of the U.S. government, with plans to expand to ChatGPT and Codex in the coming weeks. Sol launches with OpenAI's most robust safety stack to date.
 
-hackernews · chmaynard · Sep 21, 14:03 · [Discussion](https://news.ycombinator.com/item?id=49787436)
+telegram · zaihuapd · Sep 22, 18:04
 
-**Background**: Sun Microsystems was founded in 1982 and became one of Silicon Valley's most influential companies, known for SPARC workstations and servers, the Solaris operating system, the Java programming language, and NFS. Its enterprise server business was devastated by the dot-com crash, and it struggled to monetize Java while losing ground to Linux and commodity x86 hardware. Oracle acquired Sun in 2010. Bryan Cantrill worked at Sun and later Oracle, co-developing the DTrace dynamic tracing framework before co-founding Oxide Computer Company.
+**Background**: OpenAI's GPT series are large language models that power ChatGPT and the API, with each generation typically improving reasoning, coding, and safety. Codex is OpenAI's AI coding agent, available through the ChatGPT web app, CLI, desktop app, and IDE integrations, and it is one of the first surfaces for the GPT-5.6 preview. Biosecurity and cybersecurity capabilities refer to a model's potential to assist with or defend against biological and cyber threats, an area of growing policy concern as AI models become more capable.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Sun_Microsystems">Sun Microsystems - Wikipedia</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Bryan_Cantrill">Bryan Cantrill - Wikipedia</a></li>
-<li><a href="https://tms-outsource.com/blog/posts/what-happened-to-sun-microsystems/">What Happened to Sun Microsystems: Oracle’s Big Buy</a></li>
+<li><a href="https://openai.com/index/previewing-gpt-5-6-sol/">Previewing GPT-5.6 Sol: a next-generation model | OpenAI</a></li>
+<li><a href="https://www.mindstudio.ai/blog/what-is-gpt-5-6-sol-terra-luna-explained">What Is GPT-5.6? OpenAI's Sol, Terra, and Luna Model Tiers Explained | MindStudio</a></li>
+<li><a href="https://en.wikipedia.org/wiki/OpenAI_Codex_(AI_agent)">OpenAI Codex (AI agent) - Wikipedia</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The 271-comment discussion mixes nostalgia with sharp criticism: one commenter recalls that buying from Sun or DEC required live sales meetings and endless quote revisions, while a Dell server could arrive the next day for less than the cost of Sun rails and power cords. Others list specific fatal missteps such as cancelling Solaris on x86 and failing to close a deal with Google, and one former user fondly remembers Sun thin clients as slow but excellent terminal environments. A notable counterpoint argues Sun was never really interested in running a business, caring more about building great technology than selling it.
-
-**Tags**: `#Sun Microsystems`, `#technology history`, `#business strategy`, `#systems engineering`, `#Hacker News`
+**Tags**: `#OpenAI`, `#GPT-5.6`, `#AI models`, `#API`, `#Codex`
 
 ---
 
 <a id="item-5"></a>
-## [Fiber Cut Halts Flights at Busy East Coast Airports](https://www.reuters.com/world/us/faa-halts-some-us-east-coast-flights-due-communication-issues-2026-09-21/) ⭐️ 8.0/10
+## [vLLM v0.30.0 ships Fast Start GPU weight-cache daemon and many new models](https://github.com/vllm-project/vllm/releases/tag/v0.30.0) ⭐️ 8.0/10
 
-An Amtrak construction crew accidentally severed a fiber-optic cable in New Jersey, causing a telecommunications outage that forced the FAA to halt incoming flights at major airports in New York, Boston, and Philadelphia. When the system attempted to switch to its backup fiber line, operators discovered that the backup was also broken, and FAA Administrator Bryan Bedford confirmed the failed circuit snarled thousands of flights before operations resumed. The incident exposes how a single physical cable cut can cripple air traffic control across the densely populated US Northeast, affecting thousands of passengers and highlighting inadequate redundancy in life-critical aviation infrastructure. It raises urgent questions about whether the FAA's aging communications systems can withstand even routine construction accidents. The outage stemmed from a fiber line cut near the Philadelphia TRACON (terminal radar approach control) facility, and the backup fiber path was found to be broken only at the moment of failover, meaning its unserviceability may have gone undetected for days, weeks, or months. The FAA has also been rolling out a new air traffic control system, known as the SMART system, which was scheduled for early deployment around the same time.
+vLLM released v0.30.0, a major update with 762 commits from 315 contributors (104 of them new), adding support for models such as DeepSeek-V4.1-Flash, DeepSeek-V4-Flash-Vision-Exp, GLM-5.3-Flash, K2-Horizon, Cohere Compass, Bailing V3 VL and Nanbeige4.2. The headline feature is Fast Start, a persistent per-GPU weight-cache daemon that keeps post-quantized, TP-sharded weights in GPU memory so engines restart by mapping them over CUDA IPC with `--load-format ipc_cache` instead of reloading from disk. vLLM is one of the most widely used open-source LLM inference and serving engines, so its releases directly shape how production teams deploy models. Fast Start attacks one of the biggest operational pain points — slow cold starts and engine restarts — while the broad model support keeps vLLM aligned with the fast-moving frontier of open-weight architectures. Fast Start now also covers FP4 checkpoints and multi-node tensor parallelism, and the release adds Gumbel-max watermarking with per-request opt-out, HiSparse host-resident KV tiering for sparse-MLA decode, Model Runner V2 improvements (graph capture cut from 12s to 2s and engine init from 28.9s to 8.2s on H200), plus targeted online quantization via `quantization_config.targets` and FlashInfer CuTeDSL NVFP4 W4A16 as the default over Marlin on SM100/103.
 
-hackernews · allanbreyes · Sep 21, 18:41 · [Discussion](https://news.ycombinator.com/item?id=49791509)
+github · khluu · Sep 22, 05:20
 
-**Background**: Air traffic control relies on dedicated telecommunications circuits to connect radar, radio, and flight-data systems between control centers and airports; if those links fail, controllers lose the ability to safely separate aircraft. Best practice for critical networks is to build multiple physically diverse fiber paths and continuously monitor them, so that a single cut or an unnoticed backup failure does not cause an outage. Fiber-optic cables are preferred over copper for long-haul, high-bandwidth links because they carry more data with less signal loss, but they remain physically vulnerable to excavation and construction work.
+**Background**: vLLM is an open-source high-throughput, memory-efficient engine for serving large language models, supporting NVIDIA, AMD, Intel GPUs and x86/ARM/PowerPC CPUs plus plugins for TPUs, Gaudi, Ascend and other accelerators. Its core innovation is PagedAttention, which manages the KV cache in paged blocks to reduce memory waste, and it is commonly used with tensor parallelism (TP) to shard a model across multiple GPUs. Quantization formats like MXFP8 and NVFP4 reduce weight and activation precision to cut VRAM usage, while FlashMLA is DeepSeek's library of optimized multi-head latent attention (MLA) kernels used by its V3-series models.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://thehill.com/policy/transportation/6102284-faa-halts-northeast-flights/">FAA halts flights in Northeast after fiber cable cut in NJ</a></li>
-<li><a href="https://www.foxbusiness.com/economy/faa-grounds-flights-major-northeast-airports-fiber-line-cut">FAA resumes Northeast airport operations after telecom outage | Fox Business</a></li>
-<li><a href="https://newscord.org/article/faa-halts-flights-after-amtrak-crew-cuts-fibre-line-near-philadelphia-tracon--Story_20260922_FlightshaltedonUSeasdb372ff1">FAA Halts Flights After Amtrak Crew Cuts Fibre Line Near Philadelphia TRACON: how 12 outlets framed it | NewsCord</a></li>
+<li><a href="https://github.com/vllm-project/vllm">GitHub - vllm -project/ vllm : A high-throughput and memory-efficient...</a></li>
+<li><a href="https://docs.vllm.ai/en/latest/configuration/optimization/">Optimization and Tuning - vLLM</a></li>
+<li><a href="https://github.com/deepseek-ai/FlashMLA">GitHub - deepseek-ai/FlashMLA: FlashMLA: Efficient Multi-head Latent Attention Kernels · GitHub</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commenters were highly critical of the lack of redundancy and monitoring, with one noting that a life-critical system should not discover its backup fiber is broken only at failover, and another arguing that two fiber paths are insufficient even for moderately important workloads. Others shared war stories of fiber cuts caused by backhoes and even travelers cementing over an inspection cover, underscoring how common and foreseeable such failures are.
-
-**Tags**: `#infrastructure`, `#networking`, `#aviation`, `#reliability`, `#fiber-optics`
+**Tags**: `#vLLM`, `#LLM inference`, `#model serving`, `#release`, `#GPU optimization`
 
 ---
 
 <a id="item-6"></a>
-## [TypeSafe AI launches Jev, a 'System One' decision model returning typed probabilities](https://simonwillison.net/2026/Sep/21/jev/) ⭐️ 8.0/10
+## [ShinyHunters Claims Breach of FBI Employee Data](https://www.404media.co/we-hacked-the-fbi-hackers-say-they-have-data-on-all-fbi-employees/) ⭐️ 8.0/10
 
-TypeSafe AI unveiled Jev, the first of a new model category it calls 'System One models' (also called decision models), which accepts text or semi-structured 'state' input but returns typed probabilistic outputs—yes/no probabilities, choice distributions, and numeric scores—instead of generated text. The hosted API charges only for input at $0.042 per million tokens, with output free, making it cheaper than OpenAI's GPT-5 Nano. Jev introduces a fundamentally different LLM output paradigm—typed probabilistic decisions rather than prose—which could reshape how LLM-based classification, ranking, and decision systems are architected, especially where speed and cost matter. Its emergence signals growing interest in specialized, non-generative model categories that plug directly into software pipelines. Jev supports three question types: 'Noul' (Bernoulli) yes/no questions returning a confidence float between 0 and 1, choice questions returning a probability distribution over provided options, and score questions returning a float along a numeric range; questions are evaluated in parallel so many can be asked in one call. A notable limitation is that Jev is a pure black box—it returns only floating-point numbers with no textual justification, raising concerns about hidden bias and interpretability.
+The hacking group ShinyHunters claims to have stolen data on all FBI employees, reportedly obtained through a PeopleSoft zero-day vulnerability that also exposed the FBI's AWS GovCloud environment storing employee and applicant information. The group told reporters it does not consider its planned action extortion but rather 'coercion,' and stated the campaign is not financially motivated. If confirmed, this would be one of the most significant breaches of U.S. federal law enforcement data, potentially exposing agents, analysts, and support staff to targeting by foreign intelligence services or criminal actors. It also raises serious questions about the security of government HR and cloud infrastructure, echoing past incidents like the 2015 OPM hack that compromised 22.1 million records. The stolen data reportedly came from systems accessed after an initial PeopleSoft compromise, including the FBI's AWS GovCloud environment used for employee and applicant records. ShinyHunters has not provided public proof of the full dataset, and the FBI has not officially confirmed the breach, leaving the scope and authenticity of the claim uncertain.
 
-rss · Simon Willison · Sep 21, 23:09
+hackernews · spenvo · Sep 22, 17:46 · [Discussion](https://news.ycombinator.com/item?id=49805278)
 
-**Background**: Conventional LLMs generate text token by token and are priced on both input and output tokens, with output typically costing more. TypeSafe AI, founded by Diogo Almeida who worked on RLHF methods at OpenAI for ChatGPT, raised $40 million in seed funding led by DCVC and launched Jev on September 15, 2026. The name 'System One' contrasts with slower deliberative 'System Two' reasoning, evoking the fast, intuitive mode of human cognition.
+**Background**: ShinyHunters is a well-known hacking group that has previously claimed responsibility for breaches of companies like AT&T, Ticketmaster, and Santander. PeopleSoft is an enterprise resource planning (ERP) software suite made by Oracle, widely used by government agencies and large organizations for HR, payroll, and student administration. AWS GovCloud is a specialized cloud region designed to host sensitive government data at higher compliance levels. The 2015 Office of Personnel Management (OPM) breach, referenced by commenters, exposed personal data of over 22 million current and former federal employees and remains a benchmark for government data security failures.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://stackfutures.com/blog/typesafe-ai-40m-seed-system-one-jev-structured-decisions-2026/">TypeSafe AI Raises $40M to Build Models That Output Typed ...</a></li>
-<li><a href="https://www.langchain.com/blog/building-a-harness-with-jev">What Is Jev? A Guide to TypeSafe AI ’s System One Model</a></li>
+<li><a href="https://www.bleepingcomputer.com/news/security/shinyhunters-claims-fbi-hack-data-theft-in-peoplesoft-zero-day-breach/">ShinyHunters claims FBI hack, data theft in PeopleSoft zero-day breach</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Archive.ph">Archive.ph</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commentators, including Simon Willison and Maggie Appleton, prefer the term 'decision models' over 'System One models' for clarity. The CEO confirmed on Hacker News that 'Noul' is short for Bernoulli, and Willison highlighted discomfort that Jev represents a regression toward opaque black-box ML, warning against uses like ranking job applicants where hidden bias could go undetected.
+**Discussion**: Commenters expressed deep pessimism about the ability of any large organization to protect sensitive databases, with one noting that major state actors likely already possess most medical and biographical data. Others drew analogies to Battlestar Galactica's air-gapped systems and criticized the FBI's competence, while some debated whether ShinyHunters' threatened action constitutes extortion or coercion, with one suggesting a bizarre public humiliation demand instead of financial payment.
 
-**Tags**: `#LLM`, `#decision-models`, `#AI`, `#TypeSafe`, `#probabilistic-inference`
+**Tags**: `#cybersecurity`, `#data breach`, `#FBI`, `#hacking`, `#national security`
 
 ---
 
 <a id="item-7"></a>
-## [Cloudflare Python Workers reach general availability after two-year preview](https://simonwillison.net/2026/Sep/21/cloudflare-python-worker/) ⭐️ 8.0/10
+## [25 Fields Medalists Warn AI May Be Misaligned with Math Research Goals](https://t.me/zaihuapd/43973) ⭐️ 8.0/10
 
-Cloudflare announced that Python Workers are now generally available, making Python a first-class, fully supported language on the Cloudflare Developer Platform after roughly two years in preview. The implementation runs Python compiled to WebAssembly via Pyodide inside Cloudflare's V8-based workerd runtime. This is a significant milestone for serverless and edge computing, since Python is one of the most widely used languages and is now natively supported on a major edge platform. It also represents a notable engineering achievement in running a full CPython-derived runtime inside a WebAssembly sandbox at the edge, which could encourage more Python developers to adopt edge/serverless architectures. There are documented limitations, most notably that both multiprocessing and threading are non-functional inside the WebAssembly VM. Local development is handled by the pywrangler tool (published on PyPI as workers-py), which runs a full local simulation of the stack, including Pyodide in WebAssembly in V8 inside a 123MB workerd binary.
+A group of 25 Fields Medalists, including Terence Tao and Deng Yu, issued a joint statement warning that the rapid use of AI to solve mathematical problems could cause AI development goals to become 'severely misaligned' with the true aims of mathematical research. The statement argues that treating math problem-solving as a benchmark for AI capability may harm mathematical research and the academic ecosystem. This is a rare collective intervention by the world's most decorated mathematicians, signaling that the AI-for-math boom could distort research incentives, evaluation metrics, and academic integrity. It will likely influence how funders, journals, and AI labs assess progress in automated mathematical reasoning. The statement notes that large language models have recently made major gains in solving significant mathematical problems, but warns that AI-generated output at scale could compress the time needed for verification, communication, and citing prior work, and raise issues around authorship and plagiarism. It also acknowledges that AI could improve research efficiency, with the outcome depending on how the technology is used.
 
-rss · Simon Willison · Sep 21, 22:25
+telegram · zaihuapd · Sep 22, 03:00
 
-**Background**: Cloudflare Workers is a serverless platform that runs code at the edge, traditionally using JavaScript and WebAssembly; workerd is the open-source runtime that powers it. Pyodide is a community-driven port of CPython to WebAssembly/Emscripten that lets Python and many of its C-extension packages (such as NumPy and pandas) run in browser and Node.js environments. Because WebAssembly sandboxes lack OS-level process and thread primitives, Python features that depend on them, like multiprocessing and threading, cannot function there.
+**Background**: The Fields Medal is awarded every four years by the International Mathematical Union to up to four mathematicians under 40, and is widely described as the 'Nobel Prize of Mathematics'; 68 people have received it as of 2026. Terence Tao, a 2006 recipient, is a UCLA professor known for work in partial differential equations, combinatorics, and number theory, and has been an influential voice on AI's role in mathematics. Large language models such as GPT-4o, DeepSeek-V3, and Gemini-2.0 have shown rapidly improving performance on mathematical reasoning benchmarks, prompting debate about whether such benchmarks capture genuine mathematical understanding.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://pyodide.org/en/stable/index.html">Pyodide — Version 314.0.7</a></li>
-<li><a href="https://github.com/cloudflare/workerd">workerd, Cloudflare's JavaScript/Wasm Runtime - GitHub</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Fields_Medal">Fields Medal</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Terence_Tao">Terence Tao</a></li>
+<li><a href="https://arxiv.org/html/2506.00309v1">Evaluation of LLMs for mathematical problem solving</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#Cloudflare`, `#Python`, `#WebAssembly`, `#Serverless`, `#Edge Computing`
+**Tags**: `#AI`, `#Mathematics`, `#Research Ethics`, `#Academic Publishing`, `#Fields Medal`
 
 ---
 
 <a id="item-8"></a>
-## [Moonshot AI Seeks Up to 30% Revenue Share from Microsoft, Amazon, Google for Kimi K3](https://t.me/zaihuapd/43950) ⭐️ 8.0/10
+## [Alibaba unveils Zhenwu V900, claims strongest domestic AI chip with 3x compute](https://finance.sina.com.cn/stock/bxjj/2026-09-22/doc-inissitf7048094.shtml) ⭐️ 8.0/10
 
-Moonshot AI is reportedly negotiating revenue-sharing agreements with Microsoft, Amazon, and Google for its Kimi K3 model, initially seeking up to a 30% cut of revenue. If concluded, it would be the first major model revenue-sharing deal between a Chinese AI company and US cloud giants, though talks remain at an early stage with core terms undecided and all parties declining to comment. This would mark the first major revenue-sharing arrangement between a Chinese AI firm and US hyperscalers, potentially reshaping how frontier models are distributed and monetized globally. It also signals that Moonshot's Kimi K3 is being positioned as a serious competitor to US frontier models on the cloud platforms where enterprise AI spending concentrates. Kimi K3 was released in July 2026 with 2.8 trillion total parameters, making it the world's first open-source 3T-class model, and its annual recurring revenue reportedly surpassed $300 million by mid-June. The negotiations are still early, with core terms such as the exact revenue split, exclusivity, and geographic scope unresolved.
+At the 2026 Yunqi Conference, Alibaba's T-Head (Pingtouge) unveiled the Zhenwu V900, a train-and-inference integrated AI chip it claims is China's strongest, delivering 3x the compute of the Zhenwu M890 with 216GB of memory and 1200GB/s inter-die bandwidth. CEO Wu Yongming said the self-developed M890 supernode already supports inference for 2-trillion-parameter models and will be scaled onto Alibaba Cloud this quarter, while the company plans a 500,000-card wide-area supernode cluster and Qwen models of 5-10 trillion parameters. The announcement signals that Alibaba is building a vertically integrated stack of models, chips, and cloud to reduce reliance on foreign accelerators amid export controls, and a 500,000-card cluster with 1GW of compute would rank among the world's largest AI training infrastructures. It also raises the competitive bar for domestic rivals such as Huawei, whose Atlas supernode clusters were previously positioned as the strongest in China. The V900 is a train-and-inference integrated chip with 216GB of memory and 1200GB/s inter-die bandwidth, but Alibaba has not disclosed detailed specs such as process node, peak throughput, or power consumption. The planned 500,000-card wide-area supernode cluster targets 1GW of compute, 200PB/s bandwidth, and 6-microsecond communication latency, built on the V900, NPO optical modules, HPN 8.0 networking, and CPFS storage, with the goal of supporting 10-trillion-parameter MoE model training.
 
-telegram · zaihuapd · Sep 21, 06:44
+telegram · zaihuapd · Sep 22, 03:30
 
-**Background**: Moonshot AI is a Beijing-based startup founded in March 2023 by Yang Zhilin, Zhou Xinyu, and Wu Yuxin, and by July 2026 it had reached a valuation of $35 billion, backed by investors including Alibaba and Tencent. Kimi K3 is an open-weight, natively multimodal agentic model built on Kimi Delta Attention (KDA) and Attention Residuals (AttnRes), featuring native vision and a 1-million-token context window. Revenue-sharing deals between model developers and cloud providers are an emerging monetization model in the AI industry, in which cloud platforms host and sell access to a model in exchange for a cut of the resulting revenue.
+**Background**: T-Head (Pingtouge) is Alibaba's in-house chip design unit, and the Zhenwu series is its AI accelerator line; the M890 is the previous generation, and the V900 is positioned as its successor, with a further J900 also on the disclosed roadmap. Supernodes are tightly coupled clusters of many accelerators connected by high-speed interconnects, designed to train and serve very large models that cannot fit on a single node. Qwen is Alibaba's open-weight large language model family, and parameter count (such as 5-10 trillion) is a rough measure of model scale, with trillion-parameter MoE models requiring massive distributed training infrastructure.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://huggingface.co/blog/ResterChed/kimi-k3-model-overview-mxfp4-quantization-open-wei">Kimi K3 Model Overview: 2.8T Parameters, MXFP4 Quantization ...</a></li>
-<li><a href="https://github.com/MoonshotAI/Kimi-K3/tree/main">GitHub - MoonshotAI/Kimi-K3: Open Frontier Intelligence</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Moonshot_AI">Moonshot AI - Wikipedia</a></li>
+<li><a href="https://www.ithome.com/1/005/602.htm">最强国产 AI 芯 片 阿里 平 头 哥 真 武 V 900 ...</a></li>
+<li><a href="https://www.chooseai.net/news/7318/">阿里云计划建 50 万卡广域超节点集群：1GW 算力、6 微秒通信延迟-Choo...</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/2085708631140579231">阿里研究员透露Qwen4.5后模型将扩展至5-10T参数 - 知乎</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#AI`, `#business`, `#cloud computing`, `#Kimi K3`, `#Moonshot AI`
+**Tags**: `#AI chips`, `#Alibaba`, `#T-Head`, `#Qwen`, `#datacenter infrastructure`
 
 ---
 
 <a id="item-9"></a>
-## [Apple unveils 2nm M6 chip and quad-die M5 Ultra](https://t.me/zaihuapd/43965) ⭐️ 8.0/10
+## [Cloudflare Python Workers Reach General Availability](https://blog.cloudflare.com/python-workers-ga/) ⭐️ 8.0/10
 
-Apple announced its first 2nm chip, the M6, debuting in the new Mac mini with a 12-core CPU, 12-core GPU, dual 16-core neural engines, and up to 170GB/s unified memory bandwidth. Alongside it, Apple introduced the M5 Ultra in the new Mac Studio, its first quad-die M-series chip, offering up to 36 CPU cores, 80 GPU cores, 512GB of memory, and 1.2TB/s bandwidth. The M6 marks Apple's move to the 2nm process node, a significant step in semiconductor manufacturing that could improve performance-per-watt across future Macs. The M5 Ultra's quad-die design and 1.2TB/s bandwidth make it Apple's most powerful chip yet, strengthening its position in high-end desktops for AI and professional workloads. The M5 Ultra uses a new version of UltraFusion to connect two dual-die M5 Max chips, achieving the quad-die layout, and its 1.2TB/s memory bandwidth is 50% higher than the M3 Ultra. The M6's dual 16-core neural engines and 170GB/s bandwidth target on-device AI tasks in a compact desktop.
+On September 21, Cloudflare announced the general availability of Python Workers, making Python a first-class language on its developer platform with seamless access to Workers AI, R2, and D1. The feature, first launched two years ago, now natively supports frameworks like FastAPI, Django, and Flask, and adds low-level networking capabilities that allow running PostgreSQL and AI libraries such as LangChain directly within Workers. This milestone significantly lowers the barrier for Python developers to deploy applications on the edge, as they can now use familiar frameworks and AI libraries without leaving Cloudflare's serverless environment. It signals a broader shift in edge computing toward first-class support for Python, potentially affecting how cloud applications are built and deployed across the industry. Python Workers run via Pyodide, a WebAssembly-compiled Python interpreter, inside V8 isolates, which enables broad Python application support but may impose performance and compatibility constraints compared to native runtimes. The GA release includes support for the Python standard library and packages, and integrates with Cloudflare's global network for AI inference through Workers AI.
 
-telegram · zaihuapd · Sep 21, 16:32
+telegram · zaihuapd · Sep 22, 04:00
 
-**Background**: The 2nm process node is the next major semiconductor manufacturing step after 5nm and 3nm, using nanosheet transistors to pack more transistors onto a chip for better performance and efficiency. Apple's M-series chips use a unified memory architecture, where CPU, GPU, and neural engines share a single high-bandwidth memory pool, which is especially important for running large AI models locally. 'Quad-die' means four separate silicon dies are packaged and connected to act as one chip, a technique Apple previously used with two dies in its Ultra chips.
+**Background**: Cloudflare Workers is a serverless platform that lets developers run code across Cloudflare's global edge network without managing infrastructure. Python Workers were first introduced two years ago as a way to bring Python to this environment, using WebAssembly and Pyodide to run Python code in V8 isolates. Workers AI provides serverless GPU-powered AI inference, while R2 is an egress-free object storage service and D1 is a serverless SQL database, all part of Cloudflare's developer platform.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/2_nm_process">2 nm process - Wikipedia</a></li>
-<li><a href="https://www.macobserver.com/news/apple-unveils-m6-and-m5-ultra-chips-with-huge-cpu-gpu-and-ai-upgrades/">Apple Unveils M6 and M5 Ultra Chips With Huge CPU, GPU and AI...</a></li>
-<li><a href="https://www.hoxtonmacs.co.uk/blogs/news/what-is-unified-memory">What is Unified Memory – Hoxton Macs</a></li>
+<li><a href="https://blog.cloudflare.com/python-workers-ga/">Python Workers are now generally available | Cloudflare Blog</a></li>
+<li><a href="https://developers.cloudflare.com/workers/languages/python/how-python-workers-work/">How Python Workers Work - Cloudflare Docs</a></li>
+<li><a href="https://www.cloudflare.com/products/workers-ai/">Cloudflare Workers AI - Edge AI Inference Platform</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#Apple`, `#Silicon`, `#Semiconductor`, `#Hardware`, `#Chips`
+**Tags**: `#Cloudflare`, `#Python`, `#Serverless`, `#Edge Computing`, `#Workers AI`
+
+---
+
+<a id="item-10"></a>
+## [DeepSeek and Tsinghua Release DSec Sandbox Platform Technical Report](https://arxiv.org/abs/2609.22978) ⭐️ 8.0/10
+
+DeepSeek-AI and Tsinghua University jointly released a technical report on DeepSeek Elastic Compute (DSec), a sandbox infrastructure platform that serves about 3 million sandbox instances per day and supports large-scale agent training and evaluation. The platform offers four backends — FnCall, containers, Firecracker microVMs, and full VMs — through a unified SDK, and decouples stateful rollout execution from preemptible GPU training. Agent training and evaluation increasingly depend on massive numbers of isolated execution environments, and DSec shows that such infrastructure can be operated at production scale with high density and fast creation rates. The reported optimizations and production metrics provide a concrete reference for other teams building reinforcement learning and agent systems, and reinforce DeepSeek's position in open AI infrastructure. A single production unit of DSec uses about 160 nodes, with peak concurrency exceeding 380,000 sandboxes and a creation rate above 5,000 per second; one node can host up to 3,200 containers or 800 microVMs. By loading EROFS images on demand from the 3FS distributed file system instead of pulling full Docker images, DSec reports 1.7x faster task completion and 57% less disk write, while memory sharing and reclamation cut peak memory usage by about 40%.
+
+telegram · zaihuapd · Sep 22, 04:45
+
+**Background**: Sandboxes are isolated execution environments used to safely run untrusted code, which is essential when training AI agents that interact with tools, operating systems, or security scenarios. Firecracker is an open-source virtualization technology from AWS that creates lightweight microVMs with strong isolation and low overhead, while EROFS is a read-only Linux filesystem optimized for container and sandbox images. 3FS is DeepSeek's own high-performance distributed file system designed for AI training and inference workloads, and DSec builds on these components to serve millions of sandboxes per day.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://github.com/deepseek-ai/3FS">GitHub - deepseek-ai/3FS: A high-performance distributed file ...</a></li>
+<li><a href="https://github.com/firecracker-microvm/firecracker">GitHub - firecracker-microvm/firecracker: Secure and fast ... GitHub - firecracker-microvm/firecracker: Secure and fast ... I tried Firecracker microVMs for self-hosted services, and it ... firecracker-microvm/firecracker | DeepWiki Run Your First Firecracker microVM - labs.iximiuz.com What Is a Firecracker VM? · Learn</a></li>
+<li><a href="https://docs.kernel.org/filesystems/erofs.html">EROFS - Enhanced Read-Only File System — The Linux Kernel documentation</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#AI infrastructure`, `#agent training`, `#sandbox`, `#DeepSeek`, `#systems`
+
+---
+
+<a id="item-11"></a>
+## [US Proposes AI Incident Notification Channel with China](https://x.com/rohanpaul_ai/status/2102254209597157548) ⭐️ 8.0/10
+
+The United States has proposed establishing an AI incident notification channel with China to report AI-related events that meet national security thresholds, a proposal raised during September 20 talks in New York. US Treasury Secretary Bessent said the aim is to improve transparency between the two countries, and the two sides also plan regular US-China AI dialogue on shared risks. This is a significant geopolitical development in AI governance, signaling a potential shift toward bilateral transparency and risk management between the world's two leading AI powers. If realized, such a channel could reduce the risk of miscalculation over dangerous AI incidents and set a precedent for international AI safety cooperation. The proposal has not yet become a bilateral agreement or treaty, and China's official statement confirmed that AI-related issues were discussed but did not explicitly accept the specific mechanism. The channel would only cover incidents meeting national security thresholds, leaving the definition of such thresholds unresolved.
+
+telegram · zaihuapd · Sep 22, 06:48
+
+**Background**: AI incident reporting systems are structured processes for systematically collecting, analyzing, and mitigating harm events caused directly or indirectly by AI systems. The US and China are the world's two leading AI powers, and bilateral engagement on AI safety had been largely frozen for about two years before this dialogue. Scoping such talks is difficult because 'AI' can mean anything from self-driving cars and facial recognition to autonomous weapons and large language models.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://www.emergentmind.com/topics/ai-incident-reporting-systems">AI Incident Reporting Systems</a></li>
+<li><a href="https://www.brookings.edu/articles/a-roadmap-for-a-us-china-ai-dialogue/">A roadmap for a US - China AI dialogue | Brookings</a></li>
+<li><a href="https://news.google.com/stories/CAAqNggKIjBDQklTSGpvSmMzUnZjbmt0TXpZd1NoRUtEd2o3MjlyOUVSRWsxaVhIcmY2bGp5Z0FQAQ?hl=en-US&gl=US&ceid=US:en">US proposes AI incident alert system in talks with China - Overview</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#AI governance`, `#US-China relations`, `#AI safety`, `#policy`, `#national security`
+
+---
+
+<a id="item-12"></a>
+## [China Probes DeepSeek and Moonshot Over Data Leaks to Anthropic's Claude](https://www.theinformation.com/articles/china-probes-deepseek-moonshot-potential-data-leaks-anthropic) ⭐️ 8.0/10
+
+China's internet regulator is investigating DeepSeek and Moonshot AI over allegations that they forwarded sensitive user data to Anthropic's Claude model, according to people familiar with the matter. The probe follows a 154-page report Anthropic published on September 10, which accused seven Chinese companies of large-scale misuse of Claude and cited an example of DeepSeek forwarding a request from an engineer working on police surveillance systems. This case sits at the intersection of AI governance, data privacy, and escalating US-China tech tensions, and could set precedents for how Chinese regulators police cross-border data flows involving foreign AI models. It may also affect how DeepSeek and Moonshot — two of China's most prominent AI startups — operate and are perceived internationally. Anthropic's report specifically names seven Chinese companies for large-scale violations of its Claude usage policies, with the DeepSeek example involving an engineer working on police surveillance systems. The investigation is being conducted by China's internet regulator, though no formal charges or penalties have been announced yet.
+
+telegram · zaihuapd · Sep 22, 14:37
+
+**Background**: DeepSeek is a Hangzhou-based AI company owned by hedge fund High-Flyer that develops open-weight large language models and released its DeepSeek-R1 chatbot in January 2025, which briefly surpassed ChatGPT as the most downloaded free app on the US iOS App Store. Moonshot AI is a Chinese startup known for its Kimi series of models, including the open-source reasoning-oriented Kimi K2 Thinking. Anthropic is the US AI safety company behind the Claude assistant, and its report accusing Chinese firms of misusing Claude triggered the regulatory scrutiny.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/DeepSeek_(Company)">DeepSeek (Company)</a></li>
+<li><a href="https://www.anthropic.com/claude/sonnet">Claude Sonnet \ Anthropic</a></li>
+<li><a href="https://free.theresanaiforthat.com/company/moonshot-ai/">Moonshot AI | There's An AI For That</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#AI regulation`, `#data privacy`, `#DeepSeek`, `#Moonshot AI`, `#Anthropic`
+
+---
+
+<a id="item-13"></a>
+## [DeepSeek to Brief UN Security Council on AI Risks](https://t.me/zaihuapd/43989) ⭐️ 8.0/10
+
+Two sources say Chinese AI startup DeepSeek will brief the 15-member UN Security Council this week on the risks posed by artificial intelligence, with OpenAI CEO Sam Altman and senior Anthropic representatives also expected to attend the Wednesday session on AI and international security. DeepSeek and Moonshot are among the Chinese AI firms invited to speak, though DeepSeek founder Liang Wenfeng does not plan to attend and the arrangements could still change. This marks a rare moment where leading Chinese and US AI labs appear before the UN's top security body together, signaling that AI risk is now treated as a matter of international peace and security rather than purely a technical or commercial issue. It could shape emerging global AI governance norms and give Chinese AI developers a direct voice in setting international safety expectations. The briefing is scheduled for Wednesday before the 15-member Security Council, with Altman planning to attend and Anthropic sending senior representatives, while DeepSeek founder Liang Wenfeng is not expected to appear. The lineup of speakers and arrangements remain subject to last-minute changes, according to the sources cited by Reuters.
+
+telegram · zaihuapd · Sep 22, 17:39
+
+**Background**: The UN Security Council first convened in July 2023 to discuss how AI affects international peace and security, and member states have since recognized its potential to reshape economics, warfare, and peacemaking. DeepSeek is a Hangzhou-based Chinese AI company, funded by the hedge fund High-Flyer, that develops open-weights large language models, while Anthropic is a US AI safety and research company behind the Claude assistant. Bringing these labs before the Council reflects growing momentum to place frontier AI under multilateral scrutiny.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/DeepSeek_(Company)">DeepSeek (Company)</a></li>
+<li><a href="https://www.securitycouncilreport.org/atf/cf/{65BFCF9B-6D27-4E9C-8CD3-CF6E4FF96FF9}/Concept+Note+AI+UNSC+Signature+Event+(1).pdf">CONCEPT NOTE: UN Security Council Briefing on Artificial ...</a></li>
+<li><a href="https://www.anthropic.com/careers">Careers \ Anthropic</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#AI governance`, `#DeepSeek`, `#UN Security Council`, `#AI safety`, `#international security`
 
 ---
